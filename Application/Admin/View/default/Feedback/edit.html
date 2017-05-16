@@ -1,0 +1,38 @@
+<layout name="layout" />
+
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data" >
+    	<input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">联系：</td>
+                <td>
+                    <input  type="text" name="link" value="<?php echo $data['link']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">描述信息：</td>
+                <td>
+                    <input  type="text" name="info" value="<?php echo $data['info']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">发布时间：</td>
+                <td>
+                    <input id="adddate" type="text" name="adddate" value="<?php echo $data['adddate']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+$("#adddate").datepicker(); 
+</script>

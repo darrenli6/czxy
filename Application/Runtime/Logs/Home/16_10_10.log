@@ -1,0 +1,1825 @@
+[ 2016-10-10T01:00:28+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:00:31+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.007000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.009000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-10T01:00:35+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.009000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '15135580287' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.016001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '15135580287' LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:00:55+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-10-10T01:00:59+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.007000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.010000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.003001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-10T01:01:02+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-10T01:01:04+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-10-10T01:01:07+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.009001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.007001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:01:09+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:01:10+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:images
+
+[ 2016-10-10T01:01:10+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:images
+
+[ 2016-10-10T01:01:16+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/isExitst.html?mobilephone=18835573312
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.010000s ]
+SQL: SELECT * FROM `czxy_user` WHERE ( username=18835573312 ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2016-10-10T01:01:18+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' AND `password` = 'c33367701511b4f6020ec61ded352059' LIMIT 1   [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:01:20+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:01:22+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.009001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-10T01:01:26+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.009001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.014001s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.010000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.007000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.019001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 93 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-10T01:01:31+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.009000s ]
+SQL: INSERT INTO `czxy_recordcoursetip` (`username`,`email`,`classid`) VALUES ('18835573312','',0) [ RunTime:0.359020s ]
+
+[ 2016-10-10T01:01:36+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.009000s ]
+SQL: DELETE FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' [ RunTime:0.456026s ]
+
+[ 2016-10-10T01:04:07+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.009001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 93 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:05:06+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.005001s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.009001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.008000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 95 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 101 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:05:28+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.007001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.008000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 95 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 101 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-10T01:05:53+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.006001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 94 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:05:56+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.010001s ]
+SQL: INSERT INTO `czxy_recordcoursetip` (`username`,`email`,`classid`) VALUES ('18835573312','',0) [ RunTime:0.082005s ]
+
+[ 2016-10-10T01:06:00+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.006001s ]
+SQL: DELETE FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' [ RunTime:0.152008s ]
+
+[ 2016-10-10T01:06:04+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.011001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.004000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.006001s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.005000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.007001s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.006000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 94 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-10T01:06:48+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.007001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 98 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:07:14+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.007001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 98 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-10-10T01:07:25+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.009000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003001s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.006001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.008000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 98 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:07:45+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.006001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.006001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.010001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 98 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T01:08:41+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.004000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.009001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.007000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 98 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T01:09:14+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.008001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 99 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:09:22+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.010000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.009001s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.010001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.006000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 99 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:12:38+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.009001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.007001s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.004001s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.012000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.004001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 99 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-10-10T01:13:46+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.011000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.009001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.011001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 99 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 105 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-10-10T01:14:43+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.009000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.006001s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.006000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: department D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 94 行.
+NOTIC: [8] Undefined variable: class D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\2e00f23705a8f9676ea89aa5eee78d3f.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-10T01:14:52+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.010000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.007000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-10-10T01:15:14+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.009000s ]
+NOTIC: [8] Undefined index: username D:\WWW\Test4\czxy\ThinkPHP\Library\Think\Model.class.php 第 1072 行.
+SQL: UPDATE `czxy_user` SET `nickname`='',`departmentid`=1,`classid`=1,`xuehao`='13407211',`sex`='男',`qq`='',`email`='503102319@qq.com' WHERE `username` = '18835573312' [ RunTime:0.229013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T01:15:17+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.007001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:15:21+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.010000s ]
+SQL: INSERT INTO `czxy_recordcoursetip` (`username`,`email`,`classid`) VALUES ('18835573312','503102319@qq.com',1) [ RunTime:0.089005s ]
+
+[ 2016-10-10T01:15:27+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.010001s ]
+SQL: DELETE FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' [ RunTime:0.249014s ]
+
+[ 2016-10-10T01:15:32+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.010001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.009000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.007001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.007000s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-10-10T01:16:46+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.057003s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.009000s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.004000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.008001s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.009001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' LIMIT 1   [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T01:16:54+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.007000s ]
+SQL: INSERT INTO `czxy_recordcoursetip` (`username`,`email`,`classid`) VALUES ('18835573312','503102319@qq.com',1) [ RunTime:0.293017s ]
+
+[ 2016-10-10T01:16:58+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/saveCourseTip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.009000s ]
+SQL: DELETE FROM `czxy_recordcoursetip` WHERE `username` = '18835573312' [ RunTime:0.157009s ]
+
+[ 2016-10-10T01:32:45+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T10:45:59+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T10:46:19+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_news [ RunTime:1.359078s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.004000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:1.004057s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:41:01+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.711041s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.215012s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.002000s ]
+
+[ 2016-10-10T11:42:13+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:43:32+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:56:16+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.006000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:56:39+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:56:56+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.090005s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:57:15+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.006000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:58:05+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.006000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.010001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T11:58:08+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 8,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.003001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-10-10T12:00:03+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.003000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:00:25+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.007000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 8,8   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.004000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:00:36+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:00:44+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.007001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 8,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-10T12:00:49+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.007000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:02:30+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.008000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.004001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T12:02:33+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 8,8   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.004001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-10T12:02:44+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.006001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-10T12:02:58+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.007001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:03:01+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 8,8   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:03:06+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.004001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:03:32+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.006001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:03:36+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 8,8   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.004000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:03:41+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.006001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T12:03:58+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:36:30+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Broadcast/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_broadcast [ RunTime:0.008001s ]
+SQL: SELECT `id`,`title`,`leader`,`adddate` FROM `czxy_broadcast`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:37:08+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Broadcast/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_broadcast [ RunTime:0.004000s ]
+SQL: SELECT `id`,`title`,`leader`,`adddate` FROM `czxy_broadcast`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T23:37:28+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Broadcast/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_broadcast [ RunTime:0.005000s ]
+SQL: SELECT `id`,`title`,`leader`,`adddate` FROM `czxy_broadcast`  [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:37:31+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Broadcast/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_broadcast [ RunTime:0.004001s ]
+SQL: SELECT `id`,`title`,`leader`,`adddate` FROM `czxy_broadcast`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:39:10+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Broadcast/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_broadcast [ RunTime:0.005000s ]
+SQL: SELECT `id`,`title`,`leader`,`adddate` FROM `czxy_broadcast`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:39:13+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Broadcast/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: DESCRIBE czxy_broadcast [ RunTime:0.006000s ]
+SQL: SELECT `id`,`title`,`leader`,`adddate` FROM `czxy_broadcast`  [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:52:40+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Broadcast/detail/bid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

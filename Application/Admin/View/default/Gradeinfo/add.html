@@ -1,0 +1,65 @@
+<layout name="layout" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">学号：</td>
+                <td>
+                    <input  type="text" name="stuno" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">学期：</td>
+                <td>
+                    <select name="periodno">
+                        <?php foreach($gpData as $k=>$v):?>
+                         <option value="<?php echo $v['id']; ?>" ><?php echo $v['periodname']; ?></option>
+                        <?php endforeach; ?> 
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">学生成绩信息：</td>
+                <td>
+                     <ul id="list">
+            	       <li>
+            	        科目成绩:<a onclick="addNewGrade(this);" href="#">[+]</a>
+            	        <select name="gradeinfo[course][]">
+            	         <?php foreach($cData as $k=>$v):  ?>
+            	          <option value="<?php echo $v['coursename'] ?>"><?php echo $v['coursename'] ?></option>
+            	         <?php endforeach;  ?>
+            	        </select>
+            	       <input name="gradeinfo[grade][]" type="text" required="required" value="" />分
+            	       </li>
+            	     </ul>
+                     
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+function addNewGrade(a)
+{   
+	var li=$(a).parent();
+	if($(a).text()=='[+]')
+		{  
+		  var newLi= li.clone();
+		  newLi.find('a').text('[-]');
+		  li.after(newLi);
+		}else{
+	      li.remove();
+		}
+	 
+}
+</script>

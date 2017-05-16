@@ -1,0 +1,74 @@
+<layout name="layout" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">星期：</td>
+                <td>
+                    <select name="xingqi">
+                       <option value="星期一">星期一</option>
+                       <option value="星期二">星期二</option>
+                       <option value="星期三">星期三</option>
+                       <option value="星期一">星期四</option>
+                       <option value="星期五">星期五</option>
+                       <option value="星期六">星期六</option>
+                       <option value="星期日">星期日</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">第一节课：</td>
+                <td>
+                    <input  type="text" name="diyi" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">第二节课：</td>
+                <td>
+                    <input  type="text" name="dier" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">第三节课：</td>
+                <td>
+                    <input  type="text" name="disan" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">第四节课：</td>
+                <td>
+                    <input  type="text" name="disi" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">第五节课：</td>
+                <td>
+                    <input  type="text" name="diwu" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">班级id：</td>
+                <td>
+                    <select name="classid">
+                    <?php foreach($cData as $k=>$v):?>
+                    <option value="<?php echo $v['id'];  ?>">
+                     <?php echo $v['nameid'].'-'.$v['name'];  ?>
+                    </option>
+                    <?php endforeach; ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+</script>

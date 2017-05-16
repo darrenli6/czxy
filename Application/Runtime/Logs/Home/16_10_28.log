@@ -1,0 +1,841 @@
+[ 2016-10-28T09:49:15+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.280016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.280016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.187010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.187010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.036003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.036003s ]
+
+[ 2016-10-28T10:40:20+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T10:40:24+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.156009s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.004000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.225013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.225013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T10:40:30+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T10:40:30+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:images
+
+[ 2016-10-28T10:40:30+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:images
+
+[ 2016-10-28T10:40:35+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/isExitst.html?mobilephone=15135580287
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_user` WHERE ( username=15135580287 ) LIMIT 1   [ RunTime:0.003001s ]
+
+[ 2016-10-28T10:40:39+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.006001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '15135580287' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.006000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T10:40:41+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T10:40:43+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.004001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T10:40:47+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/personCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.004000s ]
+SQL: SELECT u.*,ur.rolename FROM czxy_user u LEFT JOIN czxy_userrole ur ON ur.id=u.roleid  WHERE `username` = '15135580287' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_department [ RunTime:0.005001s ]
+SQL: SELECT * FROM `czxy_department`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_cla`  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.004001s ]
+SQL: SELECT `id` FROM `czxy_recordcoursetip` WHERE `username` = '15135580287' LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:37:10+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-10-28T14:37:13+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.005001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.000000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:37:16+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:37:17+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:37:19+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.006000s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001001s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.005000s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:37:23+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-28T14:37:23+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+ERR: 非法操作:images
+
+[ 2016-10-28T14:37:23+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:images
+
+[ 2016-10-28T14:37:30+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/isExitst.html?mobilephone=18835537561
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.010001s ]
+SQL: SELECT * FROM `czxy_user` WHERE ( username=18835537561 ) LIMIT 1   [ RunTime:0.003000s ]
+
+[ 2016-10-28T14:37:33+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008000s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835537561' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:37:36+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:37:36+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:images
+
+[ 2016-10-28T14:37:36+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/images/zh-CN.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:images
+
+[ 2016-10-28T14:37:42+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/isExitst.html?mobilephone=18835537561
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.006000s ]
+SQL: SELECT * FROM `czxy_user` WHERE ( username=18835537561 ) LIMIT 1   [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:37:44+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/LogReg/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.011001s ]
+SQL: SELECT * FROM `czxy_user` WHERE `username` = '18835537561' AND `password` = 'c33367701511b4f6020ec61ded352059' LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:37:45+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:37:48+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/News/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news [ RunTime:0.008001s ]
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: pageObject D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+NOTIC: [8] Trying to get property of non-object D:\WWW\Test4\czxy\Application\Home\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM czxy_news a ORDER BY addtime desc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT a.* FROM czxy_news a ORDER BY addtime desc LIMIT 0,8   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_news_type [ RunTime:0.007001s ]
+SQL: SELECT * FROM `czxy_news_type`  [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-28T14:37:50+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-10-28T14:37:53+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.006001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'eq' in 'where clause'
+ [ SQL语句 ] : SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1  
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed D:\WWW\Test4\czxy\Application\Home\Controller\TeachingController.class.php 第 163 行.
+SQL: DESCRIBE czxy_user [ RunTime:0.008000s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = null AND `roleid` = 1  [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_signin [ RunTime:0.005000s ]
+SQL: SELECT DISTINCT remark FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636673-60*15 AND 1477636673+60*15  )  [ RunTime:0.176010s ]
+SQL: SELECT count(DISTINCT openid) num FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636673-60*15 AND 1477636673+60*15  ) LIMIT 1   [ RunTime:0.008001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:38:21+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.007000s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1   [ RunTime:0.002000s ]
+ERR: 1054:Unknown column 'eq' in 'where clause'
+ [ SQL语句 ] : SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1  
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed D:\WWW\Test4\czxy\Application\Home\Controller\TeachingController.class.php 第 163 行.
+SQL: DESCRIBE czxy_user [ RunTime:0.007000s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = null AND `roleid` = 1  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_signin [ RunTime:0.004000s ]
+SQL: SELECT DISTINCT remark FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636701-60*15 AND 1477636701+60*15  )  [ RunTime:0.001000s ]
+SQL: SELECT count(DISTINCT openid) num FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636701-60*15 AND 1477636701+60*15  ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-10-28T14:38:32+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.006001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1   [ RunTime:0.003000s ]
+ERR: 1054:Unknown column 'eq' in 'where clause'
+ [ SQL语句 ] : SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1  
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed D:\WWW\Test4\czxy\Application\Home\Controller\TeachingController.class.php 第 163 行.
+SQL: DESCRIBE czxy_user [ RunTime:0.007000s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = null AND `roleid` = 1  [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:38:47+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.004001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1   [ RunTime:0.002000s ]
+ERR: 1054:Unknown column 'eq' in 'where clause'
+ [ SQL语句 ] : SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1  
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed D:\WWW\Test4\czxy\Application\Home\Controller\TeachingController.class.php 第 163 行.
+SQL: DESCRIBE czxy_user [ RunTime:0.005000s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = null AND `roleid` = 1  [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:39:09+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.005001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1   [ RunTime:0.002000s ]
+ERR: 1054:Unknown column 'eq' in 'where clause'
+ [ SQL语句 ] : SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1  
+
+[ 2016-10-28T14:39:31+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.007000s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1   [ RunTime:0.002000s ]
+ERR: 1054:Unknown column 'eq' in 'where clause'
+ [ SQL语句 ] : SELECT `rolename` FROM `czxy_userrole` WHERE (  ( eq ) AND ( 3 ) ) LIMIT 1  
+
+[ 2016-10-28T14:40:36+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.004000s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.003000s ]
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed D:\WWW\Test4\czxy\Application\Home\Controller\TeachingController.class.php 第 164 行.
+SQL: DESCRIBE czxy_user [ RunTime:0.005000s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = null AND `roleid` = 1  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_signin [ RunTime:0.005000s ]
+SQL: SELECT DISTINCT remark FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636836-60*15 AND 1477636836+60*15  )  [ RunTime:0.002000s ]
+SQL: SELECT count(DISTINCT openid) num FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636836-60*15 AND 1477636836+60*15  ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:40:46+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.006001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.002000s ]
+
+[ 2016-10-28T14:40:55+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.006000s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:41:13+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.005001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed D:\WWW\Test4\czxy\Application\Home\Controller\TeachingController.class.php 第 164 行.
+
+[ 2016-10-28T14:42:23+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.007001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:42:32+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.005000s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.004000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008001s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = '1' AND `roleid` = 1  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_signin [ RunTime:0.004000s ]
+SQL: SELECT DISTINCT remark FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636952-60*15 AND 1477636952+60*15  )  [ RunTime:0.001000s ]
+SQL: SELECT count(DISTINCT openid) num FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477636952-60*15 AND 1477636952+60*15  ) LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 64 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 64 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 64 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:43:41+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.006000s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008001s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = '1' AND `roleid` = 1  [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_signin [ RunTime:0.006000s ]
+SQL: SELECT DISTINCT remark FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477637021-60*15 AND 1477637021+60*15  )  [ RunTime:0.003001s ]
+SQL: SELECT count(DISTINCT openid) num FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477637021-60*15 AND 1477637021+60*15  ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 64 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 64 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\Test4\czxy\Application\Runtime\Cache\Home\cecbc931d4c879809022ec719f5aefe3.php 第 64 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:44:21+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.005001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.005000s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = '1' AND `roleid` = 1  [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_signin [ RunTime:0.007001s ]
+SQL: SELECT DISTINCT remark FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477637061-60*15 AND 1477637061+60*15  )  [ RunTime:0.001000s ]
+
+[ 2016-10-28T14:45:40+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/Teaching/signstatebanji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE czxy_userrole [ RunTime:0.006001s ]
+SQL: SELECT `rolename` FROM `czxy_userrole` WHERE `id` = '3' LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE czxy_user [ RunTime:0.008000s ]
+SQL: SELECT `nickname`,`sex` FROM czxy_user u WHERE `classid` = '1' AND `roleid` = 1  [ RunTime:0.003001s ]
+SQL: DESCRIBE czxy_signin [ RunTime:0.006000s ]
+SQL: SELECT DISTINCT remark FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477637140-60*15 AND 1477637140+60*15  )  [ RunTime:0.001000s ]
+SQL: SELECT count(DISTINCT openid) num FROM `czxy_signin` WHERE ( UNIX_TIMESTAMP(signdate) BETWEEN  1477637140-60*15 AND 1477637140+60*15  ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-28T20:35:42+08:00 ] 127.0.0.1 /Test4/czxy/index.php/Home/PersonCenter/messagetip
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: DESCRIBE czxy_recordcoursetip [ RunTime:0.079005s ]
+SQL: SELECT `username`,`classid` FROM `czxy_recordcoursetip`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_cla [ RunTime:0.030002s ]
+SQL: SELECT `id`,`name`,`zixiarea` FROM `czxy_cla`  [ RunTime:0.003000s ]
+SQL: DESCRIBE czxy_coursetable [ RunTime:0.018001s ]
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\WWW\Test4\czxy\Application\Home\Controller\PersonCenterController.class.php 第 180 行.
+SQL: SELECT `diyi`,`dier`,`disan`,`disi`,`diwu` FROM `czxy_coursetable` WHERE `xingqi` = '星期六' AND `classid` = '2' LIMIT 1   [ RunTime:0.004000s ]
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\WWW\Test4\czxy\Application\Home\Controller\PersonCenterController.class.php 第 180 行.
+SQL: SELECT `diyi`,`dier`,`disan`,`disi`,`diwu` FROM `czxy_coursetable` WHERE `xingqi` = '星期六' AND `classid` = '1' LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.182010s ]
+INFO: [ app_end ] --END-- [ RunTime:0.182010s ]
+

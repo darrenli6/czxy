@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<school School="czxy">
+<department  departmentID="1" department="计算机系" >
+<clas id="1" clasID="1302" clas="计科1302" />
+<clas id="2" clasID="1301" clas="计科1301" />
+<clas id="3" clasID="1303" clas="软件1302" />
+ </department> <department  departmentID="2" department="化学系" >
+<clas id="4" clasID="1301" clas="化工1301" />
+<clas id="5" clasID="1302" clas="化工1302" />
+ </department> <department  departmentID="3" department="生物系" >
+<clas id="6" clasID="1301" clas="生物1301" />
+ </department> <department  departmentID="4" department="外语系" >
+<clas id="7" clasID="1401" clas="外语1401" />
+ </department> <department  departmentID="5" department="电子物理系" >
+<clas id="8" clasID="1401" clas="物理1401" />
+ </department> </school>

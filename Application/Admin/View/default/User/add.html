@@ -1,0 +1,67 @@
+<layout name="layout" />
+<meta charset="utf-8" />
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">用户名手机号：</td>
+                <td>
+                    <input  type="text" name="username" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">密码：</td>
+                <td>
+                    <input type="password" size="25" name="password" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">角色：</td>
+                <td>
+                     <select name="roleid">
+                       <?php foreach($urData as $k=>$v): ?>
+                        <option value="<?php echo $v['id']; ?>">
+                        <?php echo $v['rolename']; ?>
+                        </option>
+                       <?php endforeach;?>
+                     </select>
+                </td>
+            </tr>
+           
+            <tr>
+                <td class="label">学号：</td>
+                <td>
+                    <input  type="text" name="xuehao" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">班级代号：</td>
+                <td>
+                    <input  type="text" name="classid" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">系代号：</td>
+                <td>
+                    <input  type="text" name="departmentid" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">头像：</td>
+                <td>
+                	<input type="file" name="face" /> 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+</script>

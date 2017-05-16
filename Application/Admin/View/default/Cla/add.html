@@ -1,0 +1,52 @@
+<layout name="layout" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">班级id：</td>
+                <td>
+                    <input  type="text" name="nameid" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">班名：</td>
+                <td>
+                    <input  type="text" name="name" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">班主任姓名：</td>
+                <td>
+                    <input  type="text" name="tea_name" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">自习室地点：</td>
+                <td>
+                    <input  type="text" name="zixiarea" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">系：</td>
+                <td>
+                    <select name="departmentid">
+                    <?php foreach($dData as $k=>$v): ?>
+                    <option value="<?php echo $v['id']; ?>" ><?php echo $v['name']; ?></option>
+                    <?php endforeach; ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+</script>

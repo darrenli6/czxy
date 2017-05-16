@@ -1,0 +1,46 @@
+<layout name="layout" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data" >
+    	<input type="hidden" name="stuno" value="<?php echo $data['stuno']; ?>" />
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">学号：</td>
+                <td>
+                    <input  type="text" name="stuno" value="<?php echo $data['stuno']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                 
+                 <td class="label">学期：</td>
+                <td>
+                    <select name="periodno">
+                        <?php foreach($gpData as $k=>$v):
+                              if($v['id']==$data['periodno'])
+                                $select='selected="selected"';
+                         ?>
+                         <option <?php echo $select; ?> value="<?php echo $v['id']; ?>" ><?php echo $v['periodname']; ?></option>
+                        <?php endforeach; ?> 
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">学生成绩信息：</td>
+                <td>
+                    <input  type="text" name="gradeinfo" value="<?php echo $data['gradeinfo']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+</script>

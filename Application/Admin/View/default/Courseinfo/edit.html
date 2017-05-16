@@ -1,0 +1,31 @@
+<layout name="layout" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data" >
+    	<input type="hidden" name="courseid" value="<?php echo $data['courseid']; ?>" />
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">课程号码：</td>
+                <td>
+                    <input  type="text" name="courseid" value="<?php echo $data['courseid']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">课程名：</td>
+                <td>
+                    <input  type="text" name="coursename" value="<?php echo $data['coursename']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+</script>

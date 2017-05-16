@@ -1,0 +1,1323 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:3306
+-- Generation Time: May 10, 2017 at 02:55 AM
+-- Server version: 5.5.42
+-- PHP Version: 5.5.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `czxy`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_admin`
+--
+
+CREATE TABLE `czxy_admin` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `username` varchar(30) NOT NULL COMMENT '用户名',
+  `password` varchar(50) NOT NULL COMMENT '密码'
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='管理员';
+
+--
+-- Dumping data for table `czxy_admin`
+--
+
+INSERT INTO `czxy_admin` (`id`, `username`, `password`) VALUES
+(1, 'lijia', 'e10adc3949ba59abbe56e057f20f883e'),
+(4, 'lijia3', 'e10adc3949ba59abbe56e057f20f883e'),
+(5, 'lijia2', 'e10adc3949ba59abbe56e057f20f883e'),
+(6, 'lijia6', 'e10adc3949ba59abbe56e057f20f883e');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_admin_role`
+--
+
+CREATE TABLE `czxy_admin_role` (
+  `admin_id` mediumint(8) unsigned NOT NULL COMMENT '管理员id',
+  `role_id` mediumint(8) unsigned NOT NULL COMMENT '角色id'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员角色';
+
+--
+-- Dumping data for table `czxy_admin_role`
+--
+
+INSERT INTO `czxy_admin_role` (`admin_id`, `role_id`) VALUES
+(1, 1),
+(4, 1),
+(5, 1),
+(5, 2),
+(6, 1),
+(6, 2),
+(6, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_applyjob`
+--
+
+CREATE TABLE `czxy_applyjob` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `name` varchar(10) NOT NULL COMMENT '姓名',
+  `position` varchar(30) NOT NULL COMMENT '想要申请的职位',
+  `education` enum('高中','小学','保密','本科','大专','初中','博士','硕士') DEFAULT NULL COMMENT '学历',
+  `apply_info` varchar(200) NOT NULL DEFAULT '' COMMENT '应聘宣言',
+  `tel` char(11) NOT NULL DEFAULT '' COMMENT '电话',
+  `email` varchar(30) NOT NULL DEFAULT '' COMMENT '邮箱',
+  `qq` varchar(20) NOT NULL DEFAULT '' COMMENT 'qq',
+  `state` enum('是','否') DEFAULT '是' COMMENT '是否审核',
+  `sex` enum('男','女','保密') DEFAULT '保密' COMMENT '性别',
+  `exprience` varchar(100) DEFAULT '无' COMMENT '工作经验'
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='申请工作';
+
+--
+-- Dumping data for table `czxy_applyjob`
+--
+
+INSERT INTO `czxy_applyjob` (`id`, `name`, `position`, `education`, `apply_info`, `tel`, `email`, `qq`, `state`, `sex`, `exprience`) VALUES
+(1, '卢胜', '运营专员', '本科', '我是最棒的!', '15135580287', '503121@qq.com', '503102319', '是', '保密', '无'),
+(2, '程一帆', '行政助理', '本科', '我是最棒的!', '15135580287', '503121@qq.com', '503102319', '是', '保密', '无'),
+(3, '张瑞瑞', '行政专员', '本科', '我是最棒的!', '15135580287', '503121@qq.com', '503102319', '是', '男', '无'),
+(4, '王成龙', '公关助理', '大专', '我喜欢挑战性的工作', '15135580287', '503121@qq.com', '503102319', '是', '男', '无'),
+(5, '王子龙', '运营专员', '本科', '我是典型的工作狂', '15135580287', '503121@qq.com', '503102319', '是', '男', '无'),
+(6, '李佳', '运营专员', '本科', '我是最棒的!', '15135580287', '503121@qq.com', '503102319', '是', '保密', '无');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_broadcast`
+--
+
+CREATE TABLE `czxy_broadcast` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `title` varchar(40) NOT NULL COMMENT '标题',
+  `filepath` varchar(100) NOT NULL DEFAULT '' COMMENT '文件路径',
+  `filecontent` text NOT NULL COMMENT '文字内容',
+  `leader` varchar(30) NOT NULL COMMENT '主办方',
+  `author` varchar(15) NOT NULL COMMENT '作者',
+  `adddate` datetime NOT NULL COMMENT '发布时间',
+  `state` enum('是','否') NOT NULL DEFAULT '是' COMMENT '是否在前台显示',
+  `visited` int(11) NOT NULL DEFAULT '1' COMMENT '浏览次数',
+  `likeit` int(11) NOT NULL DEFAULT '10' COMMENT '点赞次数次数'
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='校园行广播';
+
+--
+-- Dumping data for table `czxy_broadcast`
+--
+
+INSERT INTO `czxy_broadcast` (`id`, `title`, `filepath`, `filecontent`, `leader`, `author`, `adddate`, `state`, `visited`, `likeit`) VALUES
+(8, '计算机系的光辉岁月', '20161011012502-5772.mp3', '&lt;p&gt;计算机系真棒!&lt;br/&gt;&lt;/p&gt;', '计算机系', '李佳', '2016-10-11 01:10:25', '是', 31, 18),
+(10, '感恩教育', '20161011012719-8593.mp3', '&lt;p&gt;感恩教育&lt;/p&gt;', '长治学院', '李佳', '2016-10-11 01:10:27', '是', 3, 10),
+(11, '运动会精神', '20161011012812-4073.mp3', '&lt;p&gt;运动会精神&lt;/p&gt;', '计算机系', '李佳', '2016-10-11 01:10:28', '是', 1, 10),
+(12, '田径运动会总结', '20161011151943-2612.mp3', '&lt;p&gt;田径运动会真棒!&lt;br/&gt;&lt;/p&gt;', '学生会', '李佳', '2016-10-11 15:10:20', '是', 2, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_cla`
+--
+
+CREATE TABLE `czxy_cla` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `nameid` varchar(5) NOT NULL COMMENT '?༶id',
+  `name` varchar(30) NOT NULL COMMENT '?༶??',
+  `tea_name` varchar(10) NOT NULL COMMENT '??????',
+  `zixiarea` varchar(30) NOT NULL COMMENT '?༶?ص?',
+  `departmentid` mediumint(9) NOT NULL COMMENT 'ϵid'
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='?༶??Ϣ';
+
+--
+-- Dumping data for table `czxy_cla`
+--
+
+INSERT INTO `czxy_cla` (`id`, `nameid`, `name`, `tea_name`, `zixiarea`, `departmentid`) VALUES
+(1, '1302', '计科1302', '张三', '文科楼322', 1),
+(2, '1301', '计科1301', '李四', '文科楼122', 1),
+(3, '1303', '软件1302', '赵六', '文科楼222', 1),
+(4, '1301', '化工1301', '张三', '综合111', 2),
+(5, '1302', '化工1302', '小明', '综合222', 2),
+(6, '1301', '生物1301', '张三', '综合楼222', 3),
+(7, '1401', '外语1401', '李四', '文科楼122', 4),
+(8, '1401', '物理1401', '赵六', '综合楼111', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_classroombinddev`
+--
+
+CREATE TABLE `czxy_classroombinddev` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `devid` varchar(50) NOT NULL COMMENT '设备id',
+  `classroomaddr` varchar(100) NOT NULL COMMENT '教室位置',
+  `roomcapacity` int(10) unsigned DEFAULT NULL COMMENT '教室容纳人数'
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='教室绑定探针设备';
+
+--
+-- Dumping data for table `czxy_classroombinddev`
+--
+
+INSERT INTO `czxy_classroombinddev` (`id`, `devid`, `classroomaddr`, `roomcapacity`) VALUES
+(1, '00d3c5a3', '文科楼322', 100),
+(2, '00d3c5a4', '文科楼101', 70);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_courseinfo`
+--
+
+CREATE TABLE `czxy_courseinfo` (
+  `courseid` mediumint(8) unsigned NOT NULL COMMENT '课程id',
+  `coursename` varchar(20) NOT NULL COMMENT '课程名'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='学生课程信息';
+
+--
+-- Dumping data for table `czxy_courseinfo`
+--
+
+INSERT INTO `czxy_courseinfo` (`courseid`, `coursename`) VALUES
+(11, '计算机导论'),
+(12, '数据库'),
+(13, '网络信息安全'),
+(14, '马克思主义'),
+(15, 'java高级编程');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_coursetable`
+--
+
+CREATE TABLE `czxy_coursetable` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `xingqi` varchar(10) NOT NULL COMMENT '???ڼ?',
+  `diyi` varchar(30) NOT NULL DEFAULT '' COMMENT '??һ?ڿ?',
+  `dier` varchar(30) NOT NULL DEFAULT '' COMMENT '?ڶ??ڿ?',
+  `disan` varchar(30) NOT NULL DEFAULT '' COMMENT '?????ڿ?',
+  `disi` varchar(30) NOT NULL DEFAULT '' COMMENT '???Ľڿ?',
+  `diwu` varchar(30) NOT NULL DEFAULT '' COMMENT '?????ڿ?',
+  `classid` mediumint(9) NOT NULL COMMENT '?༶'
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COMMENT='?γ̱;
+
+--
+-- Dumping data for table `czxy_coursetable`
+--
+
+INSERT INTO `czxy_coursetable` (`id`, `xingqi`, `diyi`, `dier`, `disan`, `disi`, `diwu`, `classid`) VALUES
+(1, '星期一', '嵌入式@综合楼137', '', '计算机导论@文科楼322', '形式与政策@1号楼122', '', 2),
+(2, '星期二', '教育学@综合楼136', '', '马克思@文科楼322', '', '形式与政策@1号楼122', 2),
+(3, '星期三', '嵌入式@1号楼222', '', '教育学@1号楼222', '', '心理学', 2),
+(4, '星期四', '嵌入式@1号楼222', '心理学@文科楼122', '教育学@1号楼222', '', '', 2),
+(5, '星期五', '软件工程@1号楼233', '心理学@综合楼322', '教育学@1号楼222', '', '心理学@1号楼222', 2),
+(6, '星期六', '', 'c语言@综合楼111', '', '', '', 2),
+(7, '星期日', '培训@综合楼111', '', '', '', '', 2),
+(8, '星期一', '嵌入式@综合楼137', '', '计算机导论@文科楼322', '形式与政策@1号楼122', '', 1),
+(9, '星期二', '教育学@综合楼136', '', '马克思@文科楼322', '', '形式与政策@1号楼122', 1),
+(10, '星期三', '', '', '教育学@综合楼111', '', '心理学@综合楼111', 1),
+(11, '星期四', '', '马克思@文科楼322', '教育学@综合楼111', '', '', 1),
+(12, '星期五', '软件工程@软件实验室', '', '教育学@综合楼111', '', '心理学@综合楼111', 1),
+(13, '星期六', '', 'java@软件实验室', '教育学@文科楼311', '', '', 1),
+(14, '星期日', '培训@软件实验室', '', '', '', '', 1),
+(15, '星期一', '嵌入式@综合楼137', '', '计算机导论@文科楼322', '形式与政策@1号楼122', '', 4),
+(16, '星期二', '化学元素', '', '营养学@3号楼322', '', '', 4),
+(17, '星期三', '', '', '教育学@3号楼322', '', '心理学@综合楼111', 4),
+(18, '星期四', '', '心理学@3号楼322', '元素@3号楼322', '', '', 4),
+(19, '星期五', '化工@3号楼322', '', '教育学@综合楼111', '', '心理学@综合楼122', 4),
+(20, '星期六', '', 'C语言@综合楼111', '教育学@综合楼111', '', '', 4),
+(21, '星期日', '培训@综合楼111', '', '实习@综合楼111', '', '', 4),
+(22, '星期一', '嵌入式@综合楼137', '', '计算机导论@文科楼322', '形式与政策@1号楼122', '', 5),
+(23, '星期二', '化学元素@综合楼111', '', '营养学@综合楼112', '', '', 5),
+(24, '星期三', '', '', '教育学@综合楼111', '', '植物学@综合楼116', 5),
+(25, '星期四', '', '马克思@综合楼111', '元素@文科楼222', '', '', 5),
+(26, '星期五', '', '', '', '', '心理学@综合楼115', 5),
+(27, '星期六', '', '', '教育学', '', '', 5),
+(28, '星期日', '', '', '实习', '', '', 5),
+(29, '星期一', '嵌入式@综合楼137', '', '计算机导论@文科楼322', '形式与政策@1号楼122', '', 3),
+(30, '星期二', '教育学@综合楼136', '', '马克思@文科楼322', '', '形式与政策@1号楼122', 3),
+(31, '星期三', '', '', '教育学', '', '逻辑学@综合楼111', 3),
+(32, '星期四', '', '马克思@综合楼111', 'android@软件实验室', '', '', 3),
+(33, '星期五', '', '', '', '', '心理学@综合楼116', 3),
+(34, '星期六', '', '', '体育@操场', '', '', 3),
+(35, '星期日', '', '', '实习@综合楼888', '', '', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_department`
+--
+
+CREATE TABLE `czxy_department` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'ϵid',
+  `name` varchar(30) NOT NULL COMMENT 'ϵ??',
+  `director` varchar(30) NOT NULL COMMENT 'ϵ????'
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='ϵ??Ϣ';
+
+--
+-- Dumping data for table `czxy_department`
+--
+
+INSERT INTO `czxy_department` (`id`, `name`, `director`) VALUES
+(1, '计算机系', '李四'),
+(2, '化学系', '张三'),
+(3, '生物系', '王五'),
+(4, '外语系', '赵六'),
+(5, '电子物理系', '王明');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_enterappraise`
+--
+
+CREATE TABLE `czxy_enterappraise` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT '评价id',
+  `appraisenum` int(11) NOT NULL COMMENT '星级数总体评级',
+  `tucao` varchar(100) NOT NULL DEFAULT '' COMMENT '吐槽内容',
+  `username` varchar(12) DEFAULT NULL COMMENT '用户',
+  `enterpriseid` int(10) unsigned DEFAULT NULL COMMENT '企业id'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='企业评价';
+
+--
+-- Dumping data for table `czxy_enterappraise`
+--
+
+INSERT INTO `czxy_enterappraise` (`id`, `appraisenum`, `tucao`, `username`, `enterpriseid`) VALUES
+(1, 3, '不错.\r\n						 \r\n							', '15135580287', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_faoffer`
+--
+
+CREATE TABLE `czxy_faoffer` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `com_name` varchar(20) NOT NULL COMMENT '公司名称',
+  `com_position` varchar(30) NOT NULL DEFAULT '保密' COMMENT '公司职位',
+  `com_num` mediumint(8) unsigned NOT NULL DEFAULT '1' COMMENT '人数',
+  `com_salary` varchar(20) NOT NULL DEFAULT '1000' COMMENT '薪水',
+  `com_tel` varchar(20) NOT NULL DEFAULT '' COMMENT '联系方式',
+  `com_email` varchar(30) NOT NULL DEFAULT '503102319@qq.com' COMMENT '公司邮箱',
+  `com_address` varchar(50) NOT NULL DEFAULT '长治市' COMMENT '公司地点',
+  `com_desc` varchar(100) NOT NULL DEFAULT '' COMMENT '职位描述',
+  `com_like` mediumint(8) unsigned NOT NULL DEFAULT '100' COMMENT '点赞',
+  `state` enum('是','否') DEFAULT '是' COMMENT '是否审核',
+  `checkenter` enum('企业认证','企业未认证') DEFAULT '企业未认证' COMMENT '是否认证',
+  `education` enum('本科','大专','博士','高中','初中') DEFAULT '本科' COMMENT '学历要求',
+  `fuli` varchar(40) DEFAULT '五险一金' COMMENT '福利待遇'
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='企业发布offer';
+
+--
+-- Dumping data for table `czxy_faoffer`
+--
+
+INSERT INTO `czxy_faoffer` (`id`, `com_name`, `com_position`, `com_num`, `com_salary`, `com_tel`, `com_email`, `com_address`, `com_desc`, `com_like`, `state`, `checkenter`, `education`, `fuli`) VALUES
+(1, '长治A公司', '美工', 1, '10000', '15135588888', '503102319@qq.com', '长治市城区', '薪资待遇不错', 100, '是', '企业认证', '本科', '五险一金'),
+(2, '长治B公司', 'php工程师', 1, '10040', '15135588888', '503319@qq.com', '长治市城区', '薪资待遇不错', 106, '是', '企业认证', '本科', '五险一金'),
+(3, '长治A公司', '运营专员', 1, '10000', '15135588888', '503102319@qq.com', '长治市城区', '薪资待遇不错', 100, '是', '企业认证', '本科', '五险一金'),
+(4, '长治B公司', 'android工程师', 1, '10040', '15135588888', '503319@qq.com', '长治市城区', '薪资待遇不错', 101, '是', '企业未认证', '本科', '五险一金'),
+(5, '长治A公司', 'ceo', 1, '10000', '15135588888', '503102319@qq.com', '长治市城区', '薪资待遇不错', 113, '是', '企业未认证', '本科', '五险一金'),
+(6, '长治科技公司', '运营', 12, '200', '15135580287', '503102319@qq.com', '长治医学院', '我希望你工作努力', 100, '否', '企业未认证', '大专', '五险一金');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_feedback`
+--
+
+CREATE TABLE `czxy_feedback` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `link` varchar(30) DEFAULT '' COMMENT '联系',
+  `info` varchar(200) NOT NULL COMMENT '描述信息',
+  `adddate` datetime NOT NULL COMMENT '发布时间',
+  `itemid` mediumint(9) NOT NULL COMMENT '项目id'
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='反馈表';
+
+--
+-- Dumping data for table `czxy_feedback`
+--
+
+INSERT INTO `czxy_feedback` (`id`, `link`, `info`, `adddate`, `itemid`) VALUES
+(1, '15135588888', '学校的真的很好!!!', '2016-09-23 00:14:22', 2),
+(3, '18835544444', '食堂饭菜不好吃', '2016-09-28 14:59:05', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_feeditem`
+--
+
+CREATE TABLE `czxy_feeditem` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `itemname` varchar(30) NOT NULL COMMENT '反馈标题'
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='反馈项目';
+
+--
+-- Dumping data for table `czxy_feeditem`
+--
+
+INSERT INTO `czxy_feeditem` (`id`, `itemname`) VALUES
+(1, '学校食堂问题'),
+(2, '学校政策'),
+(3, '校园行APP问题'),
+(4, '学生不良行为问题');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_gradeinfo`
+--
+
+CREATE TABLE `czxy_gradeinfo` (
+  `stuno` bigint(20) unsigned NOT NULL COMMENT '学号',
+  `periodno` mediumint(8) unsigned NOT NULL COMMENT '学期编号',
+  `gradeinfo` varchar(300) NOT NULL COMMENT '学生成绩信息'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='成绩信息';
+
+--
+-- Dumping data for table `czxy_gradeinfo`
+--
+
+INSERT INTO `czxy_gradeinfo` (`stuno`, `periodno`, `gradeinfo`) VALUES
+(13407214, 4, '数据库:100分,网络信息安全:90分,计算机导论:77分'),
+(13407215, 4, '网络信息安全:88分,计算机导论:88分,java高级编程:77分'),
+(13407216, 1, '计算机导论:88分,数据库:88分,网络信息安全:88分,马克思主义:98分');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_gradeperiod`
+--
+
+CREATE TABLE `czxy_gradeperiod` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `periodname` varchar(30) NOT NULL COMMENT '学期信息'
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='学期信息';
+
+--
+-- Dumping data for table `czxy_gradeperiod`
+--
+
+INSERT INTO `czxy_gradeperiod` (`id`, `periodname`) VALUES
+(1, '2016学年下学期'),
+(2, '2015学年上学期'),
+(3, '2015学年下学期'),
+(4, '2014学年上学期'),
+(5, '2014学年下学期');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_news`
+--
+
+CREATE TABLE `czxy_news` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `title` varchar(30) NOT NULL COMMENT '新闻标题',
+  `author` varchar(10) NOT NULL DEFAULT '' COMMENT '作者',
+  `content` longtext NOT NULL COMMENT '新闻内容',
+  `addtime` datetime NOT NULL COMMENT '发表时间',
+  `is_on_line` enum('是','否') NOT NULL DEFAULT '是' COMMENT '是否在前台显示',
+  `news_type_id` mediumint(8) unsigned NOT NULL COMMENT '新闻类型',
+  `sm_logo` varchar(150) NOT NULL DEFAULT '' COMMENT 'logo小图',
+  `sort_order` mediumint(9) NOT NULL DEFAULT '1' COMMENT '显示权重',
+  `logo` varchar(150) NOT NULL DEFAULT '' COMMENT '原图',
+  `likenews` mediumint(9) NOT NULL DEFAULT '1' COMMENT '喜欢这个新闻',
+  `likenotnews` mediumint(9) NOT NULL DEFAULT '1' COMMENT '不喜欢这个新闻'
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='新闻表';
+
+--
+-- Dumping data for table `czxy_news`
+--
+
+INSERT INTO `czxy_news` (`id`, `title`, `author`, `content`, `addtime`, `is_on_line`, `news_type_id`, `sm_logo`, `sort_order`, `logo`, `likenews`, `likenotnews`) VALUES
+(1, '学院后勤与资产管理处多措并举改善学生生活环境', 'lijia', '<p>       新学期以来，我院多项后勤保障措施实施，校园环境、后勤服务水平不断提高，获得广大学生一致认可。<br />         学院领导高度重视学生后勤保障工作，暑期前，院领导召开专门会议部署假期相关工作，全院上下始终落实“学生第一”的理念，高标准、严要求，营造让学生满意、家长放心的校园环境。<br />        我院坚持后勤管理科学化，稳抓落实各项工作有序进行。南校区集中供暖改造工程完工，,改造后南校区冬季供暖全部由长治热力公司提供，全天室内温度将不低于16℃，供暖效果将有较大改善。同时，南校供暖锅炉已拆除，有效地改善了校园环境建设。北校区洗浴中心进行了扩建，面积增加一倍，有效缓解了洗浴空间资源紧张的局面。暑假期间，南北校宿舍楼粉刷一新，创造良好的生活环境。<br />        南北校区食堂引进公司化管理，建立健全管理体制，进一步完善管理制度、管理体系，提升服务质量。食堂运营进行改革，一楼为保障性餐厅，结合学生上课时间，用餐时间也做了相应调整，同时控制饭菜价格，保障学生的基本就餐需求；二楼餐厅不限经营时间，给学生提供更多的就餐选择。进一步强化工作人员服务意识，提高服务人员水平。禁止使用塑料袋，减少白色污染，保障食品安全；禁止收取现金，使用一卡通刷卡就餐，减少现金交叉污染；坚持集中采购，按省教育厅要求定点采购大宗食材，保障食品安全。<br />        一系列改革措施营造安全健康、方便快捷的生活环境，为学生成长成才提供保障。<br /></p>', '2016-10-12 13:14:11', '是', 2, 'News/2016-10-12/thumb_0_57fdc6a2d34d8.jpg', 1, 'News/2016-10-12/57fdc6a2d34d8.jpg', 1, 1),
+(2, '院党委中心组进行“讲规矩有纪律”专题第三次集体学习讨论', '李佳', '<p>9月19日下午，院党委中心组进行“讲规矩有纪律”专题第三次集体学习和讨论。院党政领导班子成员、党群部门有关负责人等中心组成员参加学习讨论。<br />        这次党委中心组学习，首先集体学习了中办印发的《关于坚持和完善普通高等学校党委领导下的校长负责制的实施意见》、省委印发的《山西省贯彻执行普通高等学校党委领导下的校长负责制的实施办法》及我院《贯彻执行普通高等学校党委领导下的校长负责制的实施细则》、《党委会议议事规则》、《院长办公会议议事规则》、《系部党政联席会议制度》、《职能处室处务会议制度》，同时学习了习近平总书记批示重温的《党委会的工作方法》、省委组织部关于请销假和报备的规定、学院章程，以及《习近平总书记系列重要讲话读本（2016）》、《习近平总书记重要讲话文章选编》中有关严守纪律规矩的重点内容。<br />         在讨论交流中，院领导班子成员重点就贯彻执行好党委领导下的校长负责制等根本制度，结合各自工作、分管工作和班子建设的实际，紧扣“讲规矩有纪律”主题，针对性地谈体会、找不足、讲措施。<br />         党委书记韩泽春作了重点发言，指出，党委领导下的校长负责制是党中央和省委为加强和改进党对高校的领导、加强高校党的建设工作、完善高校领导体制和运行机制、保证高校科学发展而作出的顶层设计，是我们班子建设和各项工作的根本遵循，是必须不折不扣地执行和落实的纪律规矩。他强调，首要的是解决好思想认识问题。靠思想自觉，做到行动自觉。在贯彻执行党委领导下的校长负责制和配套制度上，意识不强、认识不到位、存在糊涂思想，就不可能贯彻执行到位。而不执行、不认真规范地执行、不理直气壮地去执行，实质上就是不讲规矩、不守纪律。要首先从学院领导班子抓起，提高思想认识，提高政治站位，明确纪律规矩，严守组织规定，进而在实际工作中自觉主动地、不折不扣地落实和执行到位。要坚持高校党委的领导核心地位，正确处理好党委与行政等关系，认真贯彻执行民主集中制，按照“集体领导、民主集中、个别酝酿、会议决定”的原则，集体讨论决定重大事项。各级领导班子成员要自觉规范执行，同时要认真监督检查，确保党委领导下的校长负责制和配套制度执行落实到位，为各项工作规范开展提供坚强保障。院党政领导要站在讲政治、讲大局、讲党性、讲纪律、讲规矩的高度来看问题、做工作、办事情，把党委领导下的校长负责制规定学深学透、执行到位，同时教育、管理、监督、检查分管部门、联系单位的班子、干部，执行和落实好教学系部党政联席会议制度、职能处室处务会议制度。这是我们的政治责任、分内职责，是党的纪律和规矩的明确要求。各级班子和各级干部共同规范执行和落实好党委领导下的校长负责制和配套制度，就一定能把我院各级领导班子建设好，把每项工作规范扎实地做好，把我院事业持续健康地发展好。<br />        本次学习讨论会上，院党委还对领导班子“两学一做”学习教育第三专题“讲道德有品行”集中学习研讨进行了安排部署。<br /></p>', '2016-10-12 13:19:33', '是', 1, 'News/2016-10-12/thumb_0_57fdc7e59eae6.jpg', 1, 'News/2016-10-12/57fdc7e59eae6.jpg', 1, 1),
+(3, '我院举行2016级新生开学典礼暨军训动员大会', '卢胜', '<p>9月19日上午，我院在南北校区分别举行2016级新生开学典礼暨军训动员大会。在家的党政领导、各教学系部党政负责人和教师、新生班辅导员和班主任以及相关职能部门负责人、有关干部职工出席开学典礼暨军训动员大会。<br />        党委书记韩泽春主持开学典礼时指出，学院组织举行开学典礼，既是对新同学们的庄重热烈的欢迎仪式，也是给新同学们开设的大学时代第一堂集体教育课。全院上下要牢固树立和落实“学生第一”理念，以对学院更好发展和学生成长成才高度负责的态度，兢兢业业教书育人、管理育人、服务育人，依靠全院师生员工的共同不懈努力，进一步提升我院人才培养质量，推动各项事业持续健康发展取得新的成绩。<br />        韩泽春书记强调，学院将全力为同学们的成长发展搭建平台、提供指导、积极服务，同时希望每一位新同学，不忘初心、继续前行，树立远大理想，脚踏实地努力，提升思想政治素养，陶冶品格道德情操，增强实践创新能力，既遵纪守规，又奋发进取，既勤奋学习，又健康生活，做到勤于学、善于思、敏于行，不断长身体、长知识、长才干，在新的起点上书写人生新的篇章，为将来实现理想、奉献社会、报效国家，打下坚实的知识、素质、能力基础，真正成为德智体美全面发展的高素质建设者和接班人。<br />        院长茹文明在开学典礼讲话中，代表学院党政领导和全院师生员工，对近3300名2016级本科新生表示热烈欢迎，并介绍了我院办学理念、发展历史、教学科研等情况，向全体新同学提出三点希望：<br />        一是勿忘初心，始终把“学习、读书”作为第一要务。做到学会学习、勤奋学习、学会专注、坚持读书。进入大学后，尽快转变学习观念，养成自我管理的能力，变被动学习为主动学习、自主学习、创造性学习，尽快地接受自主学习的方式，支配好学习时间。同时，既要学习专业知识，关注学术前沿，也要学习其他科学文化知识和新技术；在学习上要使出“洪荒之力”，要安下心来，博学之、审问之、慎思之、明辨之、笃行之，使自己成为高素质的优秀人才。<br />        二是自省自立，向善包容，始终把“品学兼优，德才兼备”作为不断追求的成长目标。自省自立，学会独立生活。向善包容，学会做人做事。同时，既要坚持锻炼身体，又要积极参加各种社团活动，提高自己的组织能力、活动能力、交往能力、表达能力、合作能力。通过大学四年的学习、熏陶、锻炼和活动，努力使自己成为品学兼优，德才兼备、身心健康的优秀人才。<br />        三是积极上进、立志创新，努力使自己成为顺应时代发展的创新人才。首先是立志。从入学的这天起，同学们要确立志向，明确目标，做好规划，编织梦想，而且要敢于把自己的人生目标定位到成才的座标之上，并为之不断地去努力、拼搏、奋斗。二是创新。同学们要努力学习，矢志创新，要敢于标新立异，打破常规，善于逆向思维，开拓进取，成为顺应时代发展的创新人才。学院也将努力为同学们创造良好的环境条件，孕育良好的育人氛围。<br />        生物科学与技术系教师胡建燃博士、历史文化与旅游管理系教师朱文广博士作为教师代表发言，表达了兢兢业业教书育人的决心和对新同学勤奋学习奋发成才的希望。化学系1602班苏鼎珺同学和中文系新闻专业1601班刘颖坤同学作为新生代表发言，表达了爱党爱国爱校的信念和不断努力矢志成才的信心。<br />         开学典礼结束后，进行了2016级新生军训动员，副院长李长江主持会议，学院军训领导组组长、党委副书记马健宏作动员讲话。<br />        马健宏副书记代表学院向担负本次军训任务的部队教官表示感谢和欢迎，向全体新生认真参训提出三点要求：一是要端正态度，提高认识。 \r\n二是要服从命令，团结协作。三是要全力投入，顽强拼搏。他希望全体参训学生全力投入，顽强拼搏，奋发有为，学习和发扬人民解放军英勇无畏的优良传统，用自己的辛勤汗水奏响大学生活的第一篇乐章。<br />        参训部队首长在发言中对全体新生提出三点希望：一是做好充足的思想准备，通过军训少一些稚气，多一份成熟；二是在军训中挑战自我、挑战极限，通过军训少一些依赖思想，多一些独立意识；三是通过军训展现当代青年大学生蓬勃向上、用于拼搏的热血豪情，少一些个人主义，多一些集体观念。<br />        大会结束后，全体新生在帮训官兵和辅导员班主任带领下，迅速积极投入到了紧张有序的军训中，同时进行包括爱党爱国教育、国防教育、安全教育、纪律教育、校情教育等多项重点内容的集中入学教育。<br /></p>', '2016-10-12 13:22:09', '是', 6, 'News/2016-10-12/thumb_0_57fdc88139181.png', 1, 'News/2016-10-12/57fdc88139181.png', 1, 1),
+(4, '我院喜迎2016级新同学', '王子龙', '<p>又是一年开学季。9月16日开始，我院2016级新生陆续报到，3200余名新鲜血液加入长治学院大家庭。<br />        学院始终秉承学生第一的理念，党委、行政高度重视迎新工作，暑假期间学院党政领导安排部署新学期迎新工作，9月初，召集相关部门负责人就2016年迎新工作作了详细安排部署，要求各职能处室和系部协同配合，全力做好新生入学工作，努力做到让家长放心，让学生舒心。院党政领导、相关部门还深入一线检查开学准备工作，实地察看2016级新生的生活和学习环境，确保新生入学的各项准备工作落实到位。<br />        迎新期间，各相关职能处室和系部，本着“文化迎新、服务迎新”的理念，用热情的服务做好迎新工作。党委宣传部利用电子显示屏、宣传展板等积极宣传学院基本情况、办学理念等，开展社会主义核心价值观宣传教育；院团委、学生会充分发动学生会力量，组织志愿者开展志愿服务，接站、咨询、提供办理报到手续指导等，受到新生和家长的一致好评；教务处、计财处等部门尽量简化报道、交费程序，减少新生报到等待时间；保卫处加强校园内外治安防范，整顿校园秩序，协调做好校园周边交通管理，并严格校园内交通疏导、车辆停放、消防安全等工作；后勤与资产管理处加班安排学生宿舍，保障供水供电，确保新生如期入住；各系学生党支部设立党员服务站，学生党员带头服务，为新生搬运行李或提供咨询帮助；院学生会为每位新生赠送二维码贴纸，利用新技术，新生通过手机扫码加入新生群，认识更多新同学同时也能了解入学攻略；各系部安排学生志愿者为新生答疑解问，提供帮助，整个报道流程井然有序；学院广播站循环广播防诈骗技巧，让新生了解诈骗手段和方法，提高警惕。<br />        全院上下，积极、周到的服务，让新生和家长体验到了我院的温暖，也让学生家长切实感受到了我院“学生第一”的理念。新生报到后，将开始大学第一课——军训，正式步入大学生活。</p>', '2016-10-12 13:22:55', '是', 4, 'News/2016-10-12/thumb_0_57fdc8afcc3ab.jpg', 1, 'News/2016-10-12/57fdc8afcc3ab.jpg', 1, 1),
+(5, '院党委纪委安排部署风清气正过“两节”', '程一帆', '<p>9月13日下午，院党委、纪委安排部署全院风清气正过好“中秋”、“国庆”，进一步推进各项事业持续健康发展。各中层党组织书记和有关职能部门负责人参加会议。党委书记韩泽春主持会议。<br />         韩泽春书记强调，9月2日学院党委就做出了部署安排，在教师节、中秋节、国庆节期间，全院上下要切实落实“两个责任”，加强教育管理和监督检查，过风清气正的节日。“中秋”、“国庆”将至，院党委和纪委再次要求，要不折不扣贯彻落实好省委办公厅、高校工委和高校纪工委文件、会议精神，以省委“一个指引、两手硬”的重大要求为指导，结合正在深入开展的“两学一做”学习教育等工作，紧紧围绕省委“五不准”要求，全面从严管党治党，着力增强“四个意识”，切实落实党风廉政建设“两个责任”，各级领导班子和各级干部、全体党员、师生员工坚决执行“八项规定”精神，坚决反对和纠正“四风问题”，加大各层级教育管理监督检查力度，细化和严格每一项责任、措施，至十月中旬集中开展全院范围内认真扎实的自查、互查、巡查，以优良的党风促校风带教风正作风。要抓住重要节庆节点，坚决把纪律规矩挺在前面，以“零容忍”的态度正风肃纪，用铁的纪律确保全院风清气正。要切实讲政治、守纪律，各级干部带头做表率，坚决守好底线，不踩红线，切实管好自己，抓好班子，带好队伍。要结合推进全院“两学一做”学习教育抓实党风廉政建设工作，各级党组织和负责人切实担当和履行好政治责任、主体责任，高度负责地抓落实，真正把基层党组织的战斗堡垒作用、党员的先锋模范作用、干部的骨干带头作用充分发挥出来，在保证纪律规矩落地生根、作风建设不断优化的同时，真正担当作为推进各方面工作规范化。<br />        \r\n 会上还传达学习了全省落实基层党建重点任务推进会精神，就各总支和支部做好党建重点工作进行了安排。<br /></p>', '2016-10-12 13:23:46', '是', 6, 'News/2016-10-12/thumb_0_57fdc8e27029a.jpg', 1, 'News/2016-10-12/57fdc8e27029a.jpg', 1, 1),
+(6, '我院教育系三名同学在全省大学生创新创业大赛中获二等奖', '卢胜', '<p>9月10日，由省教育厅主办山西大学承办的“建行杯”第二届山西省“互联网+”大学生创新创业现场决赛在山西大学举行。我院学生处带领教育系邢壮鹏、李亚楠、樊文静3名同学参加了现场复赛，经过现场PPT演示和答辩，最终获得二等奖。<br />     \r\n  本次大赛历时5个月，全省共有45所院校参赛，报名项目达878个。经过严格的校级初赛和网上评审，最终我院有2个项目获得三等奖，2个项目获得优秀奖，并遴选出1个项目参加现场复赛。<br />       通过参加此次大赛，我院参赛同学不仅收获了知识，体验了创业，更对“互联网+”有了更加深刻的理解。进一步推动了我院创新创业教育和指导工作。<br /></p>', '2016-10-12 13:25:02', '是', 6, 'News/2016-10-12/thumb_0_57fdc92e61992.png', 1, 'News/2016-10-12/57fdc92e61992.png', 1, 1),
+(7, '我院学子举办感念师恩献礼教师节活动', '张瑞瑞', '<p>教诲如春风，师恩深似海。9月10日，为迎接第32个教师节的到来，表达对一线教师的崇高敬意，在我院团委的号召下，院学生会与社团联合会共同开展了教师节感恩活动，为工作在一线的教师们送去花束与小礼品，向老师们的辛勤工作表示感谢，并送上美好的祝福。<br />        活动当天一早，院学生会及社团联合会学生代表们就提前做好了任务安排，分组登门拜访，为老师们送去节日的惊喜。收到礼物和祝福的老师们纷纷为此次活动点赞，他们表示今年的教师节气氛很好，收到同学们的心意后感到非常贴心与温暖。在这一天里，家属区里到处可听见同学们的祝福，随处可看见老师们的笑脸，老师和学生们都沉浸在节日的气氛里。<br />        三尺讲台，染苍苍白发，桃李满园，露和蔼笑靥。此次感恩活动增强了教师与学生之间的感情交流，弘扬了尊师重教的良好风尚，培养了学生尊师爱师的情感。<br /></p>', '2016-10-12 13:26:12', '是', 2, 'News/2016-10-12/thumb_0_57fdc973e1c42.jpg', 1, 'News/2016-10-12/57fdc973e1c42.jpg', 1, 1),
+(8, '长治学院2016年公开招聘工作人员', '李佳', '<p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">我院于<span>2016</span>年<span>9</span>月<span>11</span>日举行了公开招聘工作人员面试工作。现将考生面试成绩、总成绩及排名公示如下（见附件），公示期<span>5</span>天（<span>2016</span>年<span>9</span>月<span>11</span>日—<span>15</span>日）。如有异议，请以书面形式向招聘工作领导组办公室（设在人事处）提出，截止时间<span>2016</span>年<span>9</span>月<span>15</span>日<span>19:00</span>，逾期不予受理。本次招聘后续相关工作，将按照《长治学院<span>2016</span>年公开招聘工作人员工作方案》执行，请关注校园网站相关公告。<span></span></span></p>', '2016-10-12 13:27:02', '是', 6, 'News/2016-10-12/thumb_0_57fdc9a5e0c16.jpg', 1, 'News/2016-10-12/57fdc9a5e0c16.jpg', 1, 1),
+(9, '长治学院简介', '李佳', '<div><a href="http://baike.baidu.com/view/30350.htm" target="_blank">长治学院</a>(Changzhi University )创办于1958年，是一所全日制普通本科高等院校，坐落于全国十大魅力城市之一<a href="http://baike.baidu.com/subview/5722/10674181.htm" target="_blank">长治</a>。</div><div>截至2013年，学院占地面积337343.3平方米，校舍建筑面积306591.27平方米，分南北两个校区。设有13个教学系部，30个本科专业，涵盖文学、理学、工学、法学、经济学、教育学、历史学、艺术学、管理学等九个学科门类。</div><div>1958年，晋东南师范专科学校创建，成为上党地区唯一一所高等师范专科学校。</div><div>1962年，晋东南师范专科学校停办。</div><div>1978年，晋东南师范专科学校复校。</div><div>1984年，晋东南师范专科学校收归<a href="http://baike.baidu.com/view/3129424.htm" target="_blank">山西省教育厅</a>统一管理，由县（团）级升格为副厅级建制。</div><div>2001年，经省政府批准，学校与<a href="http://baike.baidu.com/view/19504.htm" target="_blank">山西师范大学</a>联合办学，成立“山西师范大学晋东南学院”。</div><div>2004年，中华人民共和国教育部教发函：“同意<a href="http://baike.baidu.com/view/2289921.htm" target="_blank">晋东南师范专科学校</a>升格为普通本科学校，校名定为长治学院，同时撤销原晋东南师范专科学校建制”。[1]<a href=""> <br /></a></div><p><br /></p>', '2016-10-12 13:28:19', '是', 1, 'News/2016-10-12/thumb_0_57fdc9f348c28.png', 1, 'News/2016-10-12/57fdc9f348c28.png', 1, 1),
+(10, '长治学院2016年公开招聘工作人员  资格审查结果及考试事宜', '李佳', '<p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">根据《长治学院<span>2016</span>年公开招聘工作人员方案》，经过初审、复审、考生确认，现将资格审查情况及有关事项通知如下： \r\n</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">一、资格审查情况</span></strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;"> </span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">公示参加长治学院<span>2016</span>年公开招聘考试报名人员资格审查结果，详见<span style="color:#FF0000;">附件<span>1</span></span>。 </span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">根据《长治学院<span>2016</span>年公开招聘工作人员方案》，“<a href=""></a><a href=""></a><span>拟招聘岗位数与每个岗位资格审查合格的人数要达到<span>1</span>：<span>3</span>比例，否则取消该岗位的考试</span>”，取消达不到规定开考比例的部分招聘岗位。详见<span style="color:#FF0000;">附件<span>2</span></span>。 <span></span></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">资格审查结果公示期<span>2</span>个工作日，如有异议请应聘人员本人亲自以书面形式提出，截止时间<span>2016</span>年<span>8</span>月<span>26</span>日下午<span>18:30</span>，逾期不再受理。 \r\n</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">二、领取准考证</span></strong><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">时间</span></strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">：<span>2016</span>年<span>9</span>月<span>3</span>日</span><span style="font-family:''ˎ̥'';font-size:14pt;"> </span><span style="font-family:''仿宋_GB2312'';font-size:14pt;"> </span><span style="font-family:''仿宋_GB2312'';font-size:14pt;">上午<span>08</span>：<span>00</span>—<span>12</span>：<span>00</span></span><span style="font-family:''Times New Roman'';font-size:14pt;">     </span><span style="font-family:''仿宋_GB2312'';font-size:14pt;">下午<span>15</span>：<span>00</span>—<span>19</span>：<span>00</span>，<strong><span style="font-family:''仿宋_GB2312'';">其他时间一概不受理领取。届时没有领取准考证的报名人员视为自动放弃考试资格。</span></strong></span><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">地点</span></strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">：长治学院北校区<span>1</span>号教学楼<span>810</span>室（即报名地点）。</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><span style="font-family:''ˎ̥'';font-size:10.5pt;"><strong><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;"><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">提示：考生本人携带身份证原件领取准考证，不得由他人代领。</span></strong><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></span></strong></strong></span><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span> </p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">三、<strong>笔试</strong> </span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">时间：<span>2016</span>年<span>9</span>月<span>4</span>日上午<span>8：</span><span>30</span>—<span>11:00</span>，请考生提前半小时到达考试地点，详见准考证。 \r\n</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">地点：考试地点及考场安排见准考证，考场分布见考点楼前展板考场示意图。 \r\n</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">成绩公布：笔试成绩及入围面试人员名单将于<span>2016</span>年<span>9</span>月<span>5</span>日上午<span>12:00</span>之前公布在长治学院人事处网站及校内政务公示栏。</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">四、面试</span></strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;"> </span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">时间暂定：<span>2016</span>年<span>9</span>月<span>11</span>日，以笔试结束后人事处网站公布时间为准。</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span> </p><p><strong><span style="font-family:''仿宋_GB2312'';font-size:14pt;">五、其他事宜</span></strong><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">1</span><span style="font-family:''仿宋_GB2312'';font-size:14pt;">、<span>9</span>月<span>4</span>日<span>8:00</span>开始进入考场，考试开始<span>15</span>分钟后不得入场，考试期间不得提前交卷、退场。 \r\n</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">2</span><span style="font-family:''仿宋_GB2312'';font-size:14pt;">、考点周围停车紧张，请考生合理安排交通工具。 \r\n</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''ˎ̥'';font-size:14pt;">  </span><span style="font-family:''仿宋_GB2312'';font-size:14pt;"> </span><span style="font-family:''仿宋_GB2312'';font-size:14pt;">考试全过程接受学校纪检监察部门及上级部门的检查和监督，欢迎广大应聘人员和社会监督。</span><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">学院纪检监察部门监督电话：<span>0355-2178090 \r\n</span></span><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">省教育厅监督电话<span>0351-3046863</span></span><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><span style="font-family:''仿宋_GB2312'';font-size:14pt;">省人社厅监督电话<span>0351-3046192</span></span><span style="font-family:''ˎ̥'';font-size:10.5pt;"> </span></p><p><span style="font-family:''ˎ̥'';font-size:10.5pt;"></span></p><p><br /></p><br /><p><br /></p>', '2016-10-12 13:30:38', '是', 3, 'News/2016-10-12/thumb_0_57fdca6e33c56.jpg', 1, 'News/2016-10-12/57fdca6e33c56.jpg', 1, 1),
+(11, 'testtest', '李佳', '<p><img src="http://127.0.0.1/czxy/Public/umeditor1_2_2-utf8-php/php/upload/20170510/14943760865819.png" alt="14943760865819.png" /></p>', '2017-05-10 08:28:09', '是', 1, 'News/2017-05-10/thumb_0_59125e999e612.png', 1, 'News/2017-05-10/59125e999e612.png', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_news_type`
+--
+
+CREATE TABLE `czxy_news_type` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT '新闻类型id',
+  `type_name` varchar(20) NOT NULL COMMENT '新闻类型名字'
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='新闻类型';
+
+--
+-- Dumping data for table `czxy_news_type`
+--
+
+INSERT INTO `czxy_news_type` (`id`, `type_name`) VALUES
+(1, '计算机系'),
+(2, '物理系'),
+(3, '外语系'),
+(4, '化学系'),
+(5, '生物系'),
+(6, '长治学院');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_privilege`
+--
+
+CREATE TABLE `czxy_privilege` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `pri_name` varchar(30) NOT NULL COMMENT '权限名称',
+  `module_name` varchar(30) NOT NULL DEFAULT '' COMMENT '模块名称',
+  `controller_name` varchar(30) NOT NULL DEFAULT '' COMMENT '控制器名称',
+  `action_name` varchar(30) NOT NULL DEFAULT '' COMMENT '方法名称',
+  `parent_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '上级权限id'
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COMMENT='权限';
+
+--
+-- Dumping data for table `czxy_privilege`
+--
+
+INSERT INTO `czxy_privilege` (`id`, `pri_name`, `module_name`, `controller_name`, `action_name`, `parent_id`) VALUES
+(1, '新闻中心', '', '', '', 0),
+(2, '新闻列表', 'Admin', 'News', 'lst', 1),
+(3, '添加新闻', 'Admin', 'News', 'add', 2),
+(4, '修改新闻', 'Admin', 'News', 'edit', 2),
+(5, '删除新闻', 'Admin', 'News', 'delete', 2),
+(6, '新闻分类列表', 'Admin', 'NewsType', 'lst', 1),
+(7, '添加新闻分类', 'Admin', 'NewsType', 'add', 6),
+(8, '修改新闻分类', 'Admin', 'NewsType', 'edit', 6),
+(9, '删除新闻分类', 'Admin', 'NewsType', 'delete', 6),
+(10, 'RBAC基于角色访问控制管理', '', '', '', 0),
+(11, '权限列表', 'Admin', 'Privilege', 'lst', 10),
+(12, '添加权限', 'Privilege', 'Admin', 'add', 11),
+(13, '修改权限', 'Admin', 'Privilege', 'edit', 11),
+(14, '删除权限', 'Admin', 'Privilege', 'delete', 11),
+(15, '角色列表', 'Admin', 'Role', 'lst', 10),
+(16, '添加角色', 'Admin', 'Role', 'add', 15),
+(17, '修改角色', 'Admin', 'Role', 'edit', 15),
+(18, '删除角色', 'Admin', 'Role', 'delete', 15),
+(19, '管理员列表', 'Admin', 'Admin', 'lst', 10),
+(20, '添加管理员', 'Admin', 'Admin', 'add', 19),
+(21, '修改管理员', 'Admin', 'Admin', 'edit', 19),
+(22, '删除管理员', 'Admin', 'Admin', 'delete', 19),
+(23, '拓展功能', '', '', '', 0),
+(24, 'GII拓展', 'GII', 'index', '', 23),
+(25, '兼职中心', '', '', '', 0),
+(26, '简历列表', 'Admin', 'Applyjob', 'lst', 25),
+(27, '添加简历', 'Admin', 'Applyjob', 'add', 26),
+(28, '修改简历', 'Admin', 'Applyjob', 'edit', 26),
+(29, '删除简历', 'Admin', 'Applyjob', 'delete', 26),
+(30, '企业发布招聘列表', 'Admin', 'Faoffer', 'lst', 25),
+(31, '添加招聘', 'Admin', 'Faoffer', 'add', 30),
+(32, '修改招聘', 'Admin', 'Faoffer', 'edit', 30),
+(33, '删除招聘', 'Admin', 'Faoffer', 'delete', 30),
+(34, '反馈信息', '', '', '', 0),
+(35, '反馈列表', 'Admin', 'Feedback', 'lst', 34),
+(36, '添加反馈', 'Admin', 'Feedback', 'add', 35),
+(37, '修改反馈', 'Admin', 'Feedback', 'edit', 35),
+(38, '删除反馈', 'Admin', 'Feedback', 'delete', 35),
+(39, '反馈标题', 'Admin', 'Feeditem', 'lst', 34),
+(40, '添加标题', 'Admin', 'Feeditem', 'add', 39),
+(41, '修改标题', 'Admin', 'Feeditem', 'edit', 39),
+(42, '删除标题', 'Admin', 'Feeditem', 'delete', 39),
+(43, '风云人物', '', '', '', 0),
+(44, '投票列表', 'Admin', 'Vote', 'lst', 43),
+(45, '添加投票', 'Admin', 'Vote', 'add', 44),
+(46, '修改投票', 'Admin', 'Vote', 'edit', 44),
+(47, '删除投票', 'Admin', 'Vote', 'delete', 44),
+(48, '投票子项目列表', 'Admin', 'Vote', 'itemlst', 44),
+(49, '添加投票子项目', 'Admin', 'Vote', 'itemadd', 44),
+(50, '修改投票子项目', 'Admin', 'Vote', 'itemedit', 44),
+(51, '删除投票自项目', 'Admin', 'Vote', 'itemdelete', 44),
+(52, '课程班级管理', '', '', '', 0),
+(53, '系级列表', 'Admin', 'Department', 'lst', 52),
+(54, '添加系', 'Admin', 'Department', 'add', 53),
+(55, '修改系', 'Admin', 'Department', 'edit', 53),
+(56, '删除系', 'Admin', 'Department', 'delete', 53),
+(57, '班级列表', 'Admin', 'Cla', 'lst', 52),
+(58, '添加班级', 'Admin', 'Cla', 'add', 57),
+(59, '修改班级', 'Admin', 'Cla', 'edit', 57),
+(60, '删除班级', 'Admin', 'Cla', 'delete', 57),
+(61, '课程表列表', 'Admin', 'Coursetable', 'lst', 52),
+(62, '添加课程表', 'Admin', 'Coursetable', 'add', 61),
+(63, '修改课程表', 'Admin', 'Coursetable', 'edit', 61),
+(64, '删除课程表', 'Admin', 'Coursetable', 'delete', 61),
+(65, '会员管理', '', '', '', 0),
+(66, '会员列表', 'Admin', 'User', 'lst', 65),
+(67, '添加会员', 'Admin', 'User', 'add', 66),
+(68, '修改会员', 'Admin', 'User', 'edit', 66),
+(69, '删除会员', 'Admin', 'User', 'delete', 66),
+(70, '二手交易管理', '', '', '', 0),
+(71, '二手信息列表', 'Admin', 'Secondthing', 'lst', 70),
+(72, '添加二手', 'Admin', 'Secondthing', 'add', 71),
+(73, '修改二手', 'Admin', 'Secondthing', 'edit', 71),
+(74, '删除二手', 'Admin', 'Secondthing', 'delete', 71),
+(75, '二手种类列表', 'Admin', 'Secondcat', 'lst', 70),
+(76, '添加二手种类', 'Admin', 'Secondcat', 'add', 75),
+(77, '修改二手种类', 'Admin', 'Secondcat', 'edit', 75),
+(78, '删除二手种类', 'Admin', 'Secondcat', 'delete', 75);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_recordcoursetip`
+--
+
+CREATE TABLE `czxy_recordcoursetip` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `classid` mediumint(9) NOT NULL COMMENT '班级信息',
+  `username` bigint(12) NOT NULL COMMENT '用户',
+  `email` varchar(40) NOT NULL COMMENT '用户的email'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='记录提醒学生课程';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_recordip`
+--
+
+CREATE TABLE `czxy_recordip` (
+  `id` mediumint(8) unsigned NOT NULL,
+  `ip` varchar(30) NOT NULL DEFAULT '',
+  `voteid` mediumint(8) unsigned NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_recordmsgsecond`
+--
+
+CREATE TABLE `czxy_recordmsgsecond` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `fromusername` varchar(12) NOT NULL COMMENT '你的卖家',
+  `secondid` mediumint(9) NOT NULL COMMENT '购买二手物品的id',
+  `tousername` varchar(12) NOT NULL COMMENT '记录买家',
+  `msgdate` datetime DEFAULT NULL COMMENT '购买时间'
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='二手货购买痕迹';
+
+--
+-- Dumping data for table `czxy_recordmsgsecond`
+--
+
+INSERT INTO `czxy_recordmsgsecond` (`id`, `fromusername`, `secondid`, `tousername`, `msgdate`) VALUES
+(2, '15135580287', 3, '18835573312', '0000-00-00 00:00:00'),
+(3, '15135580287', 2, '18835573312', '0000-00-00 00:00:00'),
+(4, '15135580287', 5, '18835573312', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_role`
+--
+
+CREATE TABLE `czxy_role` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `role_name` varchar(30) NOT NULL COMMENT '角色名称'
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='角色';
+
+--
+-- Dumping data for table `czxy_role`
+--
+
+INSERT INTO `czxy_role` (`id`, `role_name`) VALUES
+(1, '测试角色'),
+(2, '反馈专员'),
+(3, '兼职专员');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_role_pri`
+--
+
+CREATE TABLE `czxy_role_pri` (
+  `pri_id` mediumint(8) unsigned NOT NULL COMMENT '权限id',
+  `role_id` mediumint(8) unsigned NOT NULL COMMENT '角色id'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色权限';
+
+--
+-- Dumping data for table `czxy_role_pri`
+--
+
+INSERT INTO `czxy_role_pri` (`pri_id`, `role_id`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(34, 2),
+(35, 2),
+(36, 2),
+(37, 2),
+(38, 2),
+(39, 2),
+(40, 2),
+(41, 2),
+(42, 2),
+(25, 3),
+(26, 3),
+(27, 3),
+(28, 3),
+(29, 3),
+(30, 3),
+(31, 3),
+(32, 3),
+(33, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_secondcat`
+--
+
+CREATE TABLE `czxy_secondcat` (
+  `id` mediumint(9) NOT NULL COMMENT '二手类型id',
+  `name` varchar(30) NOT NULL COMMENT '二手类型名称'
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='交易种类';
+
+--
+-- Dumping data for table `czxy_secondcat`
+--
+
+INSERT INTO `czxy_secondcat` (`id`, `name`) VALUES
+(1, '电子数码'),
+(2, '书籍'),
+(3, '衣物'),
+(4, '生活用品'),
+(5, '学习资料'),
+(6, '体育用品'),
+(7, '其他');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_secondpic`
+--
+
+CREATE TABLE `czxy_secondpic` (
+  `id` mediumint(9) NOT NULL COMMENT '图片id',
+  `old_pic` varchar(40) NOT NULL COMMENT '原图',
+  `now_pic` varchar(40) NOT NULL COMMENT '现在图',
+  `second_id` mediumint(9) NOT NULL COMMENT '二手货物的id'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='二手货物图片';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_secondthing`
+--
+
+CREATE TABLE `czxy_secondthing` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `title` varchar(30) NOT NULL COMMENT '二手主题',
+  `content` text COMMENT '填写的内容',
+  `title_pic` varchar(60) NOT NULL DEFAULT '' COMMENT '主题图片',
+  `middle_title_pic` varchar(60) NOT NULL DEFAULT '' COMMENT '前台缩略图',
+  `little_title_pic` varchar(60) NOT NULL DEFAULT '' COMMENT '主题缩略图片',
+  `old_price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '原来价格',
+  `now_price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '现在价格',
+  `public_name` varchar(20) NOT NULL COMMENT '发布人名字',
+  `phone` varchar(12) NOT NULL COMMENT '手机号',
+  `qq` varchar(12) NOT NULL COMMENT 'qq号',
+  `deal_type` enum('自取','上门取货') DEFAULT NULL COMMENT '交易方式',
+  `public_time` datetime DEFAULT NULL COMMENT '发布时间',
+  `categoryid` mediumint(9) DEFAULT NULL COMMENT '二手交易物品种类',
+  `big_title_pic` varchar(60) NOT NULL COMMENT '大图',
+  `state` enum('显示','不显示') DEFAULT '显示' COMMENT '显示或者不显示主要针对卖光了'
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COMMENT='二手交易信息';
+
+--
+-- Dumping data for table `czxy_secondthing`
+--
+
+INSERT INTO `czxy_secondthing` (`id`, `title`, `content`, `title_pic`, `middle_title_pic`, `little_title_pic`, `old_price`, `now_price`, `public_name`, `phone`, `qq`, `deal_type`, `public_time`, `categoryid`, `big_title_pic`, `state`) VALUES
+(1, '桌子', '不错,完好无损.', 'Secondthing/2016-10-12/57fdcb714c62a.JPG', 'Secondthing/2016-10-12/thumb_1_57fdcb714c62a.JPG', 'Secondthing/2016-10-12/thumb_0_57fdcb714c62a.JPG', '20.00', '12.00', '李佳', '15135580287', '503102319', NULL, '2016-10-12 13:34:41', 4, 'Secondthing/2016-10-12/thumb_2_57fdcb714c62a.JPG', '显示'),
+(2, '书籍:考研必备', '只有少量的磨损.', 'Secondthing/2016-10-12/57fdcc258b348.JPG', 'Secondthing/2016-10-12/thumb_1_57fdcc258b348.JPG', 'Secondthing/2016-10-12/thumb_0_57fdcc258b348.JPG', '88.00', '43.00', '李佳', '15135580287', '503102319', NULL, '2016-10-12 13:37:42', 2, 'Secondthing/2016-10-12/thumb_2_57fdcc258b348.JPG', '显示'),
+(3, '真题集训', '考研必备', 'Secondthing/2016-10-12/57fdcc55baff5.JPG', 'Secondthing/2016-10-12/thumb_1_57fdcc55baff5.JPG', 'Secondthing/2016-10-12/thumb_0_57fdcc55baff5.JPG', '100.00', '50.00', '李佳', '15135580287', '503102319', NULL, '2016-10-12 13:38:30', 2, 'Secondthing/2016-10-12/thumb_2_57fdcc55baff5.JPG', '显示'),
+(4, '轮滑鞋', '不错哦.见面交易', 'Secondthing/2016-10-12/57fdcc8786784.JPG', 'Secondthing/2016-10-12/thumb_1_57fdcc8786784.JPG', 'Secondthing/2016-10-12/thumb_0_57fdcc8786784.JPG', '200.00', '100.00', '李佳', '15135580287', '503102319', NULL, '2016-10-12 13:39:20', 6, 'Secondthing/2016-10-12/thumb_2_57fdcc8786784.JPG', '显示'),
+(5, '自行车', '毕业进行甩卖', 'Secondthing/2016-10-12/57fdccbb71f45.JPG', 'Secondthing/2016-10-12/thumb_1_57fdccbb71f45.JPG', 'Secondthing/2016-10-12/thumb_0_57fdccbb71f45.JPG', '500.00', '300.00', '李佳', '15135580287', '503102319', NULL, '2016-10-12 13:40:12', 7, 'Secondthing/2016-10-12/thumb_2_57fdccbb71f45.JPG', '显示'),
+(6, '帽子', '很不错的帽子哦.', 'Secondthing/2016-10-12/57fdcd31eabff.JPG', 'Secondthing/2016-10-12/thumb_1_57fdcd31eabff.JPG', 'Secondthing/2016-10-12/thumb_0_57fdcd31eabff.JPG', '88.00', '33.00', '卢胜', '18835537561', '1245209687', NULL, '2016-10-12 13:42:10', 3, 'Secondthing/2016-10-12/thumb_2_57fdcd31eabff.JPG', '显示'),
+(7, '皮鞋', '真皮鞋子.', 'Secondthing/2016-10-12/57fdcd5f1cd66.JPG', 'Secondthing/2016-10-12/thumb_1_57fdcd5f1cd66.JPG', 'Secondthing/2016-10-12/thumb_0_57fdcd5f1cd66.JPG', '300.00', '100.00', '卢胜', '18835537561', '1245209687', NULL, '2016-10-12 13:42:55', 3, 'Secondthing/2016-10-12/thumb_2_57fdcd5f1cd66.JPG', '显示'),
+(8, '二手手机', '用了二个月的手机', 'Secondthing/2016-10-12/57fdcd99ede94.JPG', 'Secondthing/2016-10-12/thumb_1_57fdcd99ede94.JPG', 'Secondthing/2016-10-12/thumb_0_57fdcd99ede94.JPG', '1000.00', '400.00', '卢胜', '18835537561', '1245209687', NULL, '2016-10-12 13:43:54', 1, 'Secondthing/2016-10-12/thumb_2_57fdcd99ede94.JPG', '显示'),
+(9, '鼠标', '我毕业要走。可以便宜处理', 'Secondthing/2016-11-10/5823f1f2d18a6.jpg', 'Secondthing/2016-11-10/thumb_1_5823f1f2d18a6.jpg', 'Secondthing/2016-11-10/thumb_0_5823f1f2d18a6.jpg', '88.00', '20.00', '张瑞瑞', '18636029605', '50311220', NULL, '2016-11-10 12:05:07', 1, 'Secondthing/2016-11-10/thumb_2_5823f1f2d18a6.jpg', '显示'),
+(10, '球拍', '这件球拍九成新。非常好用，可以试用。', 'Secondthing/2016-11-10/5823f22926e98.jpg', 'Secondthing/2016-11-10/thumb_1_5823f22926e98.jpg', 'Secondthing/2016-11-10/thumb_0_5823f22926e98.jpg', '100.00', '20.00', '瑞瑞', '18636029605', '503102318', NULL, '2016-11-10 12:06:01', 6, 'Secondthing/2016-11-10/thumb_2_5823f22926e98.jpg', '显示'),
+(11, '自行车', '刚买了2个月', 'Secondthing/2016-11-10/5823f260e94b8.jpg', 'Secondthing/2016-11-10/thumb_1_5823f260e94b8.jpg', 'Secondthing/2016-11-10/thumb_0_5823f260e94b8.jpg', '500.00', '300.00', '张瑞瑞', '18636029605', '503102317', NULL, '2016-11-10 12:06:57', 4, 'Secondthing/2016-11-10/thumb_2_5823f260e94b8.jpg', '显示'),
+(12, '照相机', '索尼牌子的', 'Secondthing/2016-11-10/5823f29814af9.jpg', 'Secondthing/2016-11-10/thumb_1_5823f29814af9.jpg', 'Secondthing/2016-11-10/thumb_0_5823f29814af9.jpg', '600.00', '400.00', '张瑞瑞', '18636029605', '503102317', NULL, '2016-11-10 12:07:52', 1, 'Secondthing/2016-11-10/thumb_2_5823f29814af9.jpg', '显示'),
+(14, 'VR眼镜', '非常奇幻。非常好用', 'Secondthing/2016-11-10/5823f472b9c2f.jpg', 'Secondthing/2016-11-10/thumb_1_5823f472b9c2f.jpg', 'Secondthing/2016-11-10/thumb_0_5823f472b9c2f.jpg', '400.00', '200.00', '张瑞瑞', '18636029605', '503102318', NULL, '2016-11-10 12:15:46', 1, 'Secondthing/2016-11-10/thumb_2_5823f472b9c2f.jpg', '显示'),
+(15, 'U盘16G', 'U盘3.0接口', 'Secondthing/2016-11-10/5823f68d7616c.jpg', 'Secondthing/2016-11-10/thumb_1_5823f68d7616c.jpg', 'Secondthing/2016-11-10/thumb_0_5823f68d7616c.jpg', '50.00', '20.00', '张瑞瑞', '18636029605', '50310218', NULL, '2016-11-10 12:24:45', 5, 'Secondthing/2016-11-10/thumb_2_5823f68d7616c.jpg', '显示'),
+(16, 'iphone6', '没有修过，9成新', 'Secondthing/2016-11-10/5823f6d26440a.jpg', 'Secondthing/2016-11-10/thumb_1_5823f6d26440a.jpg', 'Secondthing/2016-11-10/thumb_0_5823f6d26440a.jpg', '4600.00', '2000.00', '张瑞', '18636029605', '503102321', NULL, '2016-11-10 12:25:54', 1, 'Secondthing/2016-11-10/thumb_2_5823f6d26440a.jpg', '显示');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_signin`
+--
+
+CREATE TABLE `czxy_signin` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `openid` varchar(50) NOT NULL COMMENT 'openid',
+  `nickname` varchar(30) NOT NULL COMMENT '昵称',
+  `headimgurl` varchar(200) NOT NULL COMMENT '头像',
+  `remark` varchar(30) NOT NULL COMMENT '用户备注信息',
+  `signdate` datetime NOT NULL COMMENT '签到时间',
+  `sex` int(11) DEFAULT '1' COMMENT '性别,1为男性 2为女性 0为未知'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='签到记录';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_signsuggestion`
+--
+
+CREATE TABLE `czxy_signsuggestion` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `remark` varchar(20) NOT NULL DEFAULT '' COMMENT '姓名',
+  `suggestiondate` datetime NOT NULL COMMENT '发表意见时间',
+  `suggestion` text COMMENT '意见'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='签到建议';
+
+--
+-- Dumping data for table `czxy_signsuggestion`
+--
+
+INSERT INTO `czxy_signsuggestion` (`id`, `remark`, `suggestiondate`, `suggestion`) VALUES
+(1, '', '2016-11-30 08:24:45', 'haha');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_user`
+--
+
+CREATE TABLE `czxy_user` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `username` varchar(12) NOT NULL COMMENT '用户名手机号',
+  `password` varchar(40) NOT NULL COMMENT '密码',
+  `yancode` int(11) NOT NULL COMMENT '验证码',
+  `xuehao` char(8) DEFAULT NULL COMMENT '学号',
+  `classid` mediumint(9) DEFAULT NULL COMMENT '班级代号',
+  `departmentid` mediumint(9) DEFAULT NULL COMMENT '系代号',
+  `face` varchar(40) NOT NULL DEFAULT '' COMMENT '头像',
+  `nickname` varchar(20) NOT NULL DEFAULT '校园行用户' COMMENT '昵称',
+  `sex` enum('男','女') NOT NULL COMMENT '性别',
+  `qq` varchar(11) NOT NULL COMMENT 'qq',
+  `email` varchar(40) NOT NULL DEFAULT '' COMMENT 'email',
+  `roleid` mediumint(9) NOT NULL DEFAULT '1' COMMENT '用户角色'
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COMMENT='用户信息';
+
+--
+-- Dumping data for table `czxy_user`
+--
+
+INSERT INTO `czxy_user` (`id`, `username`, `password`, `yancode`, `xuehao`, `classid`, `departmentid`, `face`, `nickname`, `sex`, `qq`, `email`, `roleid`) VALUES
+(3, '18835572328', 'e10adc3949ba59abbe56e057f20f883e', 9170, '13407238', 1, 1, '', '王成龙', '男', '', '', 1),
+(9, '18835573312', 'c33367701511b4f6020ec61ded352059', 5238, '13407211', 1, 1, '', '王强', '男', '', '503102319@qq.com', 1),
+(14, '15135580287', 'e10adc3949ba59abbe56e057f20f883e', 8632, '13407216', 1, 1, '', '李佳', '男', '503102319', '503102319@qq.com', 2),
+(15, '18835537561', 'c33367701511b4f6020ec61ded352059', 8614, '13407219', 1, 1, '', '卢胜', '男', '', '503102319@qq.com', 3),
+(16, '18835574430', 'c33367701511b4f6020ec61ded352059', 0, '13407239', 1, 1, '', '王辉', '男', '503102319', '503102319@qq.com', 1),
+(17, '18835574323', 'e10adc3949ba59abbe56e057f20f883e', 4648, '13407255', 1, 1, '', '张娟', '女', '55587455', '855875@qq.com', 1),
+(18, '18835575134', 'e10adc3949ba59abbe56e057f20f883e', 1862, '13407218', 1, 1, '', '连晓伟', '男', '', 'ggfxd@q.com', 1),
+(19, '18835573298', 'e10adc3949ba59abbe56e057f20f883e', 3347, '13407211', 1, 1, '', '李杰', '男', '', '55574@qq.com', 1),
+(20, '18835573005', 'e10adc3949ba59abbe56e057f20f883e', 2659, '13407219', 1, 1, '', '李森', '男', '', 'ggfxx@qq.com', 1),
+(21, '18636029605', 'e10adc3949ba59abbe56e057f20f883e', 1263, '13407258', 1, 1, '', '张瑞瑞', '男', '', '5555@qq.com', 1),
+(22, '18835571133', 'e10adc3949ba59abbe56e057f20f883e', 4648, '13407185', 1, 1, '', '张花花', '女', '55587455', '855875@qq.com', 1),
+(23, '18812345134', 'e10adc3949ba59abbe56e057f20f883e', 1862, '13407118', 1, 1, '', '连鹏鹏', '男', '', 'ggfxd@q.com', 1),
+(24, '18843213298', 'e10adc3949ba59abbe56e057f20f883e', 3347, '13407111', 1, 1, '', '李世', '男', '', '55574@qq.com', 1),
+(28, '18812343005', 'e10adc3949ba59abbe56e057f20f883e', 2659, '13407219', 1, 1, '', '李森', '男', '', 'ggfxx@qq.com', 1),
+(32, '18636019605', 'e10adc3949ba59abbe56e057f20f883e', 1263, '13407158', 1, 1, '', '张小田', '男', '', '5555@qq.com', 1),
+(33, '18835571132', 'e10adc3949ba59abbe56e057f20f883e', 4648, '13407271', 1, 1, '', '李时珍', '女', '55587455', '855875@qq.com', 1),
+(34, '18835571134', 'e10adc3949ba59abbe56e057f20f883e', 4648, '13407272', 1, 1, '', '孟本', '男', '55587455', '855875@qq.com', 1),
+(35, '18835571134', 'e10adc3949ba59abbe56e057f20f883e', 4648, '13407272', 1, 1, '', '孟本', '男', '55587455', '855875@qq.com', 1),
+(36, '18835571144', 'e10adc3949ba59abbe56e057f20f883e', 4648, '13407273', 1, 1, '', '李潇潇', '男', '55587455', '855875@qq.com', 1),
+(37, '18835572244', 'e10adc3949ba59abbe56e057f20f883e', 4648, '13407273', 1, 1, '', '李天华', '男', '55587455', '855875@qq.com', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_userrole`
+--
+
+CREATE TABLE `czxy_userrole` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `rolename` varchar(40) NOT NULL COMMENT '用户角色名字'
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='用户角色';
+
+--
+-- Dumping data for table `czxy_userrole`
+--
+
+INSERT INTO `czxy_userrole` (`id`, `rolename`) VALUES
+(1, '学生'),
+(2, '公共课老师'),
+(3, '专业课老师@1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_vote`
+--
+
+CREATE TABLE `czxy_vote` (
+  `id` mediumint(9) NOT NULL COMMENT 'id',
+  `title` varchar(30) NOT NULL COMMENT '标题',
+  `info` varchar(100) NOT NULL COMMENT '备注',
+  `vid` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '区分主题还是项目',
+  `count` int(10) unsigned NOT NULL DEFAULT '1' COMMENT '票数',
+  `state` enum('是','否') NOT NULL DEFAULT '否' COMMENT '是否在前台显示',
+  `pic` varchar(50) DEFAULT NULL COMMENT '原图',
+  `sm_pic` varchar(50) DEFAULT NULL COMMENT '小图',
+  `big_pic` varchar(50) DEFAULT NULL COMMENT '大图'
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `czxy_vote`
+--
+
+INSERT INTO `czxy_vote` (`id`, `title`, `info`, `vid`, `count`, `state`, `pic`, `sm_pic`, `big_pic`) VALUES
+(1, '三好学生投票', '希望我们要做到公正,公开,公平.', 0, 1, '是', NULL, NULL, NULL),
+(2, '周康', '周康', 1, 11, '否', 'Vote/2016-10-12/57fdc29c0e891.jpg', 'Vote/2016-10-12/thumb_0_57fdc29c0e891.jpg', 'Vote/2016-10-12/thumb_1_57fdc29c0e891.jpg'),
+(3, '李佳', '李佳', 1, 50, '否', 'Vote/2016-09-23/57e4bb9445b7b.JPG', 'Vote/2016-09-23/thumb_0_57e4bb9445b7b.JPG', 'Vote/2016-09-23/thumb_1_57e4bb9445b7b.JPG'),
+(4, '王强', '王强', 1, 90, '否', 'Vote/2016-10-12/57fdc2519d4b9.jpg', 'Vote/2016-10-12/thumb_0_57fdc2519d4b9.jpg', 'Vote/2016-10-12/thumb_1_57fdc2519d4b9.jpg'),
+(7, '长治哪里最美丽', '', 0, 1, '否', NULL, NULL, NULL),
+(10, '最美教师', '长治学院计算机系选出最美教师', 0, 1, '是', NULL, NULL, NULL),
+(11, '王成龙', '王成龙', 10, 1, '否', 'Vote/2016-10-12/57fdc3865436a.jpg', 'Vote/2016-10-12/thumb_0_57fdc3865436a.jpg', 'Vote/2016-10-12/thumb_1_57fdc3865436a.jpg'),
+(12, '卢胜', '', 10, 2, '否', 'Vote/2016-10-09/57fa41395653e.jpg', 'Vote/2016-10-09/thumb_0_57fa41395653e.jpg', 'Vote/2016-10-09/thumb_1_57fa41395653e.jpg'),
+(13, '王子龙', '', 10, 3, '否', 'Vote/2016-10-09/57fa41c546372.JPG', 'Vote/2016-10-09/thumb_0_57fa41c546372.JPG', 'Vote/2016-10-09/thumb_1_57fa41c546372.JPG'),
+(14, '李森', '', 10, 1, '否', 'Vote/2016-10-12/57fdcbd9c20e2.jpg', 'Vote/2016-10-12/thumb_0_57fdcbd9c20e2.jpg', 'Vote/2016-10-12/thumb_1_57fdcbd9c20e2.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_wifisigninfo`
+--
+
+CREATE TABLE `czxy_wifisigninfo` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `mobilephone` char(11) NOT NULL COMMENT 'MAC绑定手机号',
+  `phonemac` char(18) NOT NULL COMMENT 'MAC地址'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='探针签到信息录入';
+
+--
+-- Dumping data for table `czxy_wifisigninfo`
+--
+
+INSERT INTO `czxy_wifisigninfo` (`id`, `mobilephone`, `phonemac`) VALUES
+(1, '15135580287', 'd0:33:11:3d:df:ae');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `czxy_wifisignsuc`
+--
+
+CREATE TABLE `czxy_wifisignsuc` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'id',
+  `username` char(11) NOT NULL COMMENT '用户名',
+  `nickname` varchar(20) NOT NULL COMMENT '姓名',
+  `macaddr` char(17) NOT NULL COMMENT 'mac地址',
+  `signtime` datetime NOT NULL COMMENT '签到时间'
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='探针签到信息';
+
+--
+-- Dumping data for table `czxy_wifisignsuc`
+--
+
+INSERT INTO `czxy_wifisignsuc` (`id`, `username`, `nickname`, `macaddr`, `signtime`) VALUES
+(1, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-29 23:40:04'),
+(2, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-29 23:44:04'),
+(4, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-30 08:21:30'),
+(5, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-30 08:22:22'),
+(6, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-30 08:23:10'),
+(7, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-30 08:24:23'),
+(8, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-30 08:24:32'),
+(9, '15135580287', '李佳', 'd0:33:11:3d:df:ae', '2016-11-30 19:16:09');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `czxy_admin`
+--
+ALTER TABLE `czxy_admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_admin_role`
+--
+ALTER TABLE `czxy_admin_role`
+  ADD KEY `admin_id` (`admin_id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- Indexes for table `czxy_applyjob`
+--
+ALTER TABLE `czxy_applyjob`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_broadcast`
+--
+ALTER TABLE `czxy_broadcast`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_cla`
+--
+ALTER TABLE `czxy_cla`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `name` (`name`);
+
+--
+-- Indexes for table `czxy_classroombinddev`
+--
+ALTER TABLE `czxy_classroombinddev`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_courseinfo`
+--
+ALTER TABLE `czxy_courseinfo`
+  ADD PRIMARY KEY (`courseid`);
+
+--
+-- Indexes for table `czxy_coursetable`
+--
+ALTER TABLE `czxy_coursetable`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `classid` (`classid`);
+
+--
+-- Indexes for table `czxy_department`
+--
+ALTER TABLE `czxy_department`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_enterappraise`
+--
+ALTER TABLE `czxy_enterappraise`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_faoffer`
+--
+ALTER TABLE `czxy_faoffer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_feedback`
+--
+ALTER TABLE `czxy_feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_feeditem`
+--
+ALTER TABLE `czxy_feeditem`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_gradeinfo`
+--
+ALTER TABLE `czxy_gradeinfo`
+  ADD PRIMARY KEY (`stuno`),
+  ADD KEY `periodno` (`periodno`);
+
+--
+-- Indexes for table `czxy_gradeperiod`
+--
+ALTER TABLE `czxy_gradeperiod`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_news`
+--
+ALTER TABLE `czxy_news`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `addtime` (`addtime`),
+  ADD KEY `author` (`author`),
+  ADD KEY `title` (`title`),
+  ADD KEY `news_type_id` (`news_type_id`);
+
+--
+-- Indexes for table `czxy_news_type`
+--
+ALTER TABLE `czxy_news_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_privilege`
+--
+ALTER TABLE `czxy_privilege`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_recordcoursetip`
+--
+ALTER TABLE `czxy_recordcoursetip`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_recordip`
+--
+ALTER TABLE `czxy_recordip`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_recordmsgsecond`
+--
+ALTER TABLE `czxy_recordmsgsecond`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_role`
+--
+ALTER TABLE `czxy_role`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_role_pri`
+--
+ALTER TABLE `czxy_role_pri`
+  ADD KEY `pri_id` (`pri_id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- Indexes for table `czxy_secondcat`
+--
+ALTER TABLE `czxy_secondcat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_secondpic`
+--
+ALTER TABLE `czxy_secondpic`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_secondthing`
+--
+ALTER TABLE `czxy_secondthing`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `categoryid` (`categoryid`);
+
+--
+-- Indexes for table `czxy_signin`
+--
+ALTER TABLE `czxy_signin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_signsuggestion`
+--
+ALTER TABLE `czxy_signsuggestion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_user`
+--
+ALTER TABLE `czxy_user`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `username` (`username`),
+  ADD KEY `nickname` (`nickname`);
+
+--
+-- Indexes for table `czxy_userrole`
+--
+ALTER TABLE `czxy_userrole`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_vote`
+--
+ALTER TABLE `czxy_vote`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `czxy_wifisigninfo`
+--
+ALTER TABLE `czxy_wifisigninfo`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `mobilephone` (`mobilephone`);
+
+--
+-- Indexes for table `czxy_wifisignsuc`
+--
+ALTER TABLE `czxy_wifisignsuc`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `username` (`username`,`nickname`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `czxy_admin`
+--
+ALTER TABLE `czxy_admin`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `czxy_applyjob`
+--
+ALTER TABLE `czxy_applyjob`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `czxy_broadcast`
+--
+ALTER TABLE `czxy_broadcast`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `czxy_cla`
+--
+ALTER TABLE `czxy_cla`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `czxy_classroombinddev`
+--
+ALTER TABLE `czxy_classroombinddev`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `czxy_coursetable`
+--
+ALTER TABLE `czxy_coursetable`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=36;
+--
+-- AUTO_INCREMENT for table `czxy_department`
+--
+ALTER TABLE `czxy_department`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ϵid',AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `czxy_enterappraise`
+--
+ALTER TABLE `czxy_enterappraise`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '评价id',AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `czxy_faoffer`
+--
+ALTER TABLE `czxy_faoffer`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `czxy_feedback`
+--
+ALTER TABLE `czxy_feedback`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `czxy_feeditem`
+--
+ALTER TABLE `czxy_feeditem`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `czxy_gradeperiod`
+--
+ALTER TABLE `czxy_gradeperiod`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `czxy_news`
+--
+ALTER TABLE `czxy_news`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `czxy_news_type`
+--
+ALTER TABLE `czxy_news_type`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '新闻类型id',AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `czxy_privilege`
+--
+ALTER TABLE `czxy_privilege`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=79;
+--
+-- AUTO_INCREMENT for table `czxy_recordcoursetip`
+--
+ALTER TABLE `czxy_recordcoursetip`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id';
+--
+-- AUTO_INCREMENT for table `czxy_recordip`
+--
+ALTER TABLE `czxy_recordip`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `czxy_recordmsgsecond`
+--
+ALTER TABLE `czxy_recordmsgsecond`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `czxy_role`
+--
+ALTER TABLE `czxy_role`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `czxy_secondcat`
+--
+ALTER TABLE `czxy_secondcat`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT '二手类型id',AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `czxy_secondpic`
+--
+ALTER TABLE `czxy_secondpic`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT '图片id';
+--
+-- AUTO_INCREMENT for table `czxy_secondthing`
+--
+ALTER TABLE `czxy_secondthing`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `czxy_signin`
+--
+ALTER TABLE `czxy_signin`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id';
+--
+-- AUTO_INCREMENT for table `czxy_signsuggestion`
+--
+ALTER TABLE `czxy_signsuggestion`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `czxy_user`
+--
+ALTER TABLE `czxy_user`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=38;
+--
+-- AUTO_INCREMENT for table `czxy_userrole`
+--
+ALTER TABLE `czxy_userrole`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `czxy_vote`
+--
+ALTER TABLE `czxy_vote`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT for table `czxy_wifisigninfo`
+--
+ALTER TABLE `czxy_wifisigninfo`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `czxy_wifisignsuc`
+--
+ALTER TABLE `czxy_wifisignsuc`
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',AUTO_INCREMENT=10;

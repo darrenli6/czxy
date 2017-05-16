@@ -1,0 +1,599 @@
+create database czxy;
+use czxy;
+set names utf8;
+drop table if exists czxy_user ;
+create table czxy_user(
+  id mediumint unsigned not null auto_increment comment 'id',
+  username varchar(12) not null comment '用户名手机号',
+  password varchar(40) not null comment '密码',
+  yancode int not null comment '验证码',
+  xuehao char(8)  comment '学号',
+  classid mediumint comment '班级代号',
+  departmentid mediumint comment '系代号',
+  face varchar(40) not null default '' comment '头像',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '用户信息';
+
+alter table czxy_user add nickname varchar(20) not null comment '昵称';
+alter table czxy_user add sex enum('男','女') not null comment '性别';
+alter table czxy_user add qq varchar(11) not null comment 'qq';
+alter table czxy_user add email varchar(40) default '' not null comment 'email';
+alter table czxy_user add roleid mediumint default 1 not null comment '用户角色';
+
+create table czxy_userrole
+(
+  id mediumint unsigned not null auto_increment comment 'id',
+  rolename varchar(40) not null comment '用户角色名字',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '用户角色';
+
+insert into czxy_user(username,password,email) values('lijia','e10adc3949ba59abbe56e057f20f883e','1151@qq.com');
+
+新闻类编辑
+drop table if exists czxy_news;
+create table czxy_news(
+  id mediumint unsigned not null auto_increment comment 'id',
+  title varchar(30) not null comment '新闻标题',
+  author  varchar(10) not null default '' comment '作者',
+  content longtext not null comment '新闻内容',
+  addtime datetime not null comment '发表时间',
+  is_on_line enum('是','否') not null default '是' comment '是否在前台显示',
+  news_type_id mediumint unsigned not null comment '新闻类型',
+  sm_logo varchar(150) not null default '' comment 'logo小图',
+  primary key(id),
+  key (addtime),
+  key (author),
+  key (title)
+)engine=InnoDB default charset=utf8 comment '新闻表';
+
+alter table czxy_news add sort_order mediumint not null default 1 comment '显示权重';
+alter table czxy_news add likenews mediumint not null default 1 comment '喜欢这个新闻';           
+alter table czxy_news add likenotnews mediumint not null default 1 comment '不喜欢这个新闻';           
+drop table if exists czxy_news_type;
+create table czxy_news_type(
+  id mediumint unsigned auto_increment not null comment '新闻类型id',
+  type_name varchar(20) not null comment '新闻类型名字',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '新闻类型';
+
+
+insert into czxy_news_type(type_name) values('计算机系');
+insert into czxy_news_type(type_name) values('物理系');
+insert into czxy_news_type(type_name) values('外语系');
+
+insert into czxy_news(title,author,content,addtime,news_type_id)
+values('长治迎新晚会','李佳','好好好!',NOW(),1);
+
+drop table if exists czxy_applyjob;
+create table  czxy_applyjob(
+  id mediumint unsigned auto_increment not null comment 'id',
+  name varchar(10) not null comment '姓名',
+  position varchar(30) not null comment '想要申请的职位',
+  education enum('高中','小学','保密','本科','大专','初中','博士','硕士') comment '学历',
+  apply_info varchar(200) not null default '' comment '应聘宣言',
+  tel char(11)  not null default '' comment '电话',
+  email varchar(30) not null default '' comment '邮箱',
+  qq varchar(20) not null default '' comment 'qq', 
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '申请工作';
+
+alter table czxy_applyjob add state enum('是','否') default '是' comment '是否审核'; 
+alter table czxy_applyjob add sex enum('男','女','保密') default '保密' comment '性别'; 
+alter table czxy_applyjob add exprience varchar(100) default '无' comment '工作经验'; 
+
+
+
+
+
+
+insert into czxy_applyjob(name,position,education,apply_info,
+tel,email,qq
+)values('张三','运营专员','高中','我是最棒的!',
+'15135580287','503121@qq.com','503102319'
+);
+insert into czxy_applyjob(name,position,education,apply_info,
+tel,email,qq
+)values('李四','运营专员','本科','我是最棒的!',
+'15135580287','503121@qq.com','503102319'
+);
+
+drop table if exists czxy_faoffer;
+create table czxy_faoffer(
+  id mediumint unsigned auto_increment not null comment 'id',
+  com_name varchar(20) not null   comment '公司名称',
+  com_position varchar(30) not null default '保密' comment '公司职位',
+  com_num mediumint unsigned not null default 1 comment '人数',
+  com_salary varchar(20) not null default 1000   comment '薪水',
+  com_tel varchar(20) not null default '' comment '联系方式',
+  com_email varchar(30) not null  default '503102319@qq.com' comment '公司邮箱',
+  com_address varchar(50) not null default '长治市' comment '公司地点',
+  com_desc varchar(100) not null default '' comment '职位描述',
+  com_like mediumint unsigned not null default 100 comment '点赞',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '企业发布offer';
+
+
+
+create table czxy_enterappraise(
+  id mediumint unsigned auto_increment  comment '评价id',
+  appraisenum int  not null comment '星级数总体评级',
+  tucao varchar(100) not null default '' comment '吐槽内容',
+  username varchar(12)  comment '用户',
+  enterpriseid int unsigned comment '企业id',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '企业评价';
+
+alter table czxy_faoffer add checkenter enum('企业认证','企业未认证') default '企业未认证' comment '是否认证'; 
+alter table czxy_faoffer add education enum('本科','大专','博士','高中','初中') default '本科' comment '学历要求'; 
+alter table czxy_faoffer add fuli varchar(40) default '五险一金' comment '福利待遇'; 
+alter table czxy_faoffer add state enum('是','否') default '是' comment '是否审核'; 
+
+insert into czxy_faoffer(com_name,com_position,com_salary,com_tel,
+com_email,com_address,com_desc
+)values('长治A公司','秘书','10000','15135588888',
+'503102319@qq.com','长治市城区','薪资待遇不错'
+);
+insert into czxy_faoffer(com_name,com_position,com_salary,com_tel,
+com_email,com_address,com_desc
+)values('长治B公司','秘书','10040','15135588888',
+'503319@qq.com','长治市城区','薪资待遇不错'
+);
+
+drop table if exists czxy_feedback;
+create table czxy_feedback(
+  id mediumint not null auto_increment comment 'id',
+  link varchar(30)  default '' comment '联系',
+  info varchar(200) not null  comment '描述信息', 
+  adddate datetime not null comment '发布时间',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '反馈表';
+alter table czxy_feedback add itemid mediumint not null commment '项目id';
+
+create table czxy_feeditem(
+  id mediumint not null auto_increment comment 'id',
+  itemname varchar(30) not null comment '反馈标题',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '反馈项目';
+
+
+
+drop table if exists czxy_vote;
+create table czxy_vote(
+  id mediumint not null auto_increment comment 'id',
+  title varchar(30) not null comment '标题',
+  info  varchar(100) not null comment '备注',
+  vid   mediumint unsigned not null default 0 comment '区分主题还是项目',
+  count int unsigned not null default 1 comment '票数',
+  ip varchar(30)  not null default '127.0.0.1' comment 'ip地址',
+  state enum('是','否')  not null default '否' comment '是否在前台显示',
+  pic varchar(50) comment '原图',
+  sm_pic varchar(50) comment '小图',
+  big_pic varchar(50) comment '大图',
+  primary key(id)
+);
+
+insert into czxy_vote(title,info) values('三好学生投票','希望我们要做到公正,公开,公平.') ;
+insert into czxy_vote(title,info,vid,count) values('张三','张三',1,10) ;
+insert into czxy_vote(title,info,vid,count) values('李四','李四',1,50) ;
+insert into czxy_vote(title,info,vid,count) values('王五','王五',1,80) ;
+
+create table czxy_recordip(
+ id mediumint unsigned not null auto_increment,
+ ip varchar(30) not null default '127.0.0.1',
+ voteid mediumint unsigned not null,
+ primary key(id)
+)
+
+课程表的需求分析 
+可以知道根据的自己班级查看课程表信息
+可以学号名字查看成绩
+
+create table czxy_coursetable(
+  id mediumint unsigned primary key not null auto_increment comment 'id',
+  xingqi varchar(10)  not null comment '星期几',
+  diyi varchar(30) not null default '' comment '第一节课',
+  dier varchar(30) not null default '' comment '第二节课',
+  disan varchar(30) not null default '' comment '第三节课',
+  disi varchar(30) not null default '' comment '第四节课',
+  diwu varchar(30) not null default '' comment '第五节课',
+  classid mediumint not null  comment '班级',
+  key (classid)
+)engine=InnoDB default charset=utf8 comment '课程表';
+
+update czxy_coursetable set diyi='教育学@综合楼136',dier='',disan='马克思@文科楼322',disi='',diwu='形式与政策@1号楼122'
+ where xingqi='星期二' AND classid IN (1,2,3);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期一','嵌入式','android','教育学','','',1);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期二','嵌入式','','教育学','嵌入式','',1);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期三','','','教育学','','心理学',1);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期四','','心理学','教育学','','',1);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期五','软件工程','','教育学','','心理学',1);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期六','','java','教育学','','',1);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期日','培训','','','','',1);
+
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期一','有机学','','','','',4);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期二','化学元素','','营养学','','',4);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期三','','','教育学','','心理学',4);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期四','','心理学','元素','','',4);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期五','化工','','教育学','','心理学',4);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期六','','C语言','教育学','','',4);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期日','培训','','实习','','',4);
+
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期一','有机化学','','','','',5);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期二','化学元素','','营养学','','',5);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期三','','','教育学','','植物学',5);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期四','','马克思','元素','','',5);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期五','','','','','心理学',5);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期六','','','教育学','','',5);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期日','','','实习','','',5);
+
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期一','java','','','','',3);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期二','软件培训','','操作系统','','',3);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期三','','','教育学','','逻辑学',3);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期四','','马克思','android','','',3);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期五','','','','','心理学',3);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期六','','','体育','','',3);
+insert into czxy_coursetable(xingqi,diyi,dier,disan,disi,diwu,classid)
+values('星期日','','','实习','','',3);
+
+测试
+select c.nameid,c.name,d.id,d.name 
+from czxy_cla c
+LEFT JOIN czxy_department d ON d.id=c.departmentid
+
+drop table if exists czxy_cla;
+create table czxy_cla(
+  id mediumint  unsigned auto_increment primary key comment 'id',
+  nameid varchar(5) not null comment '班级id',
+  name varchar(30) not null comment '班级名',
+  tea_name varchar(10) not null comment '班主任',
+  zixiarea varchar(30) not null comment '班级地点',
+  departmentid mediumint not null comment '系id',
+  key (name)
+)engine=InnoDB default charset=utf8 comment '班级信息';
+
+alter table czxy_cla add stu_num mediumint default 40 comment '班级人数'; 
+
+
+drop table if exists czxy_department;
+create table czxy_department(
+  id mediumint unsigned auto_increment   comment '系id',
+  name varchar(30) not null comment '系名', 
+  director varchar(30) not null comment '系主任',
+  primary key(id) 
+)engine=InnoDB default charset=utf8 comment '系信息';
+
+
+二手货物
+
+主题 备注 主题图片 原价格  现在价格
+
+发布人 手机 QQ 交易方式(自取,上门送货) 发布时间
+
+发布 
+drop table if exists czxy_secondthing;
+create table czxy_secondthing(
+  id mediumint not null auto_increment comment 'id',
+  title varchar(30) not null comment '二手主题',
+  content text not null comment '填写的内容',
+  title_pic varchar(40) not null comment '主题图片',
+  little_title_pic varchar(40) not null comment '主题缩略图片',
+  old_price decimal(10,2) not null comment '原来价格',
+  now_price decimal(10,2) not null comment '现在价格',
+  public_name varchar(20) not null comment '发布人名字',
+  phone varchar(12) not null comment '手机号',
+  qq varchar(12) not null comment 'qq号',
+  deal_type enum('自取','上门取货') comment '交易方式',
+  public_time datetime not null comment '发布时间',
+  categoryid mediumint not null comment '二手交易物品种类',
+  primary key(id),
+  key (categoryid)
+)engine=InnoDB default charset=utf8 comment '二手交易信息';
+
+alter table czxy_secondthing add big_title_pic varchar(60) not null comment  '大图'; 
+alter table czxy_secondthing add state enum('显示','不显示') default '显示'  comment '显示或者不显示主要针对卖光了'; 
+
+主题 165 149  
+393 355
+
+
+create table czxy_secondcat(
+   id mediumint not null auto_increment comment '二手类型id' ,
+   name varchar(30) not null comment '二手类型名称',
+   primary key(id)
+)engine=InnoDB default charset=utf8 comment '交易种类';
+drop table if exists czxy_secondpic;
+create table czxy_secondpic(
+   id mediumint not null auto_increment comment '图片id',
+   old_pic varchar(40) not null comment '原图',
+   now_pic varchar(40) not null comment '现在图',
+   second_id mediumint not null  comment '二手货物的id',
+   primary key(id)
+)engine=InnoDB default charset=utf8 comment '二手货物图片';
+
+
+记录发短信息购买痕迹
+
+create table czxy_recordmsgsecond(
+  id mediumint not null auto_increment comment 'id',
+  fromusername varchar(12) not null comment '你的卖家',
+  secondid mediumint not null comment '购买二手物品的id',
+  tousername varchar(12) not null comment '记录买家',
+  msgdate  datetime not null comment '购买时间',
+  primary key(id)
+)engine=InnoDB default charset=utf8 comment '二手货购买痕迹';
+
+
+drop table if exists czxy_privilege;
+create table czxy_privilege
+(
+ id mediumint unsigned not null auto_increment comment 'id',
+ pri_name varchar(30) not null comment '权限名称',
+ module_name varchar(30) not null default '' comment '模块名称',
+ controller_name varchar(30) not null default '' comment '控制器名称',
+ action_name varchar(30) not null default '' comment '方法名称',
+ parent_id mediumint unsigned not null default '0' comment '上级权限id',
+ primary key(id)
+)engine=InnoDB default charset=utf8 comment '权限';
+
+INSERT INTO `czxy_privilege` (`id`, `pri_name`, `module_name`, `controller_name`, `action_name`, `parent_id`) VALUES
+(1, '新闻中心', '', '', '', 0),
+(2, '新闻列表', 'Admin', 'News', 'lst', 1),
+(3, '添加新闻', 'Admin', 'News', 'add', 2),
+(4, '修改新闻', 'Admin', 'News', 'edit', 2),
+(5, '删除新闻', 'Admin', 'News', 'delete', 2),
+(6, '新闻分类列表', 'Admin', 'NewsType', 'lst', 1),
+(7, '添加新闻分类', 'Admin', 'NewsType', 'add', 6),
+(8, '修改新闻分类', 'Admin', 'NewsType', 'edit', 6),
+(9, '删除新闻分类', 'Admin', 'NewsType', 'delete', 6),
+(10, 'RBAC基于角色访问控制管理', '', '', '', 0),
+(11, '权限列表', 'Admin', 'Privilege', 'lst', 10),
+(12, '添加权限', 'Privilege', 'Admin', 'add', 11),
+(13, '修改权限', 'Admin', 'Privilege', 'edit', 11),
+(14, '删除权限', 'Admin', 'Privilege', 'delete', 11),
+(15, '角色列表', 'Admin', 'Role', 'lst', 10),
+(16, '添加角色', 'Admin', 'Role', 'add', 15),
+(17, '修改角色', 'Admin', 'Role', 'edit', 15),
+(18, '删除角色', 'Admin', 'Role', 'delete', 15),
+(19, '管理员列表', 'Admin', 'Admin', 'lst', 10),
+(20, '添加管理员', 'Admin', 'Admin', 'add', 19),
+(21, '修改管理员', 'Admin', 'Admin', 'edit', 19),
+(22, '删除管理员', 'Admin', 'Admin', 'delete', 19),
+(23, '拓展功能', '', '', '', 0),
+(24, 'GII拓展', 'GII', 'index', '', 23),
+(25, '兼职中心', '', '', '', 0),
+(26, '简历列表', 'Admin', 'Applyjob', 'lst', 25),
+(27, '添加简历', 'Admin', 'Applyjob', 'add', 26),
+(28, '修改简历', 'Admin', 'Applyjob', 'edit', 26),
+(29, '删除简历', 'Admin', 'Applyjob', 'delete', 26),
+(30, '企业发布招聘列表', 'Admin', 'Faoffer', 'lst', 25),
+(31, '添加招聘', 'Admin', 'Faoffer', 'add', 30),
+(32, '修改招聘', 'Admin', 'Faoffer', 'edit', 30),
+(33, '删除招聘', 'Admin', 'Faoffer', 'delete', 30),
+(34, '反馈信息', '', '', '', 0),
+(35, '反馈列表', 'Admin', 'Feedback', 'lst', 34),
+(36, '添加反馈', 'Admin', 'Feedback', 'add',35 ),
+(37, '修改反馈', 'Admin', 'Feedback', 'edit', 35),
+(38, '删除反馈', 'Admin', 'Feedback', 'delete', 35),
+(39, '反馈标题', 'Admin', 'Feeditem', 'lst', 34),
+(40, '添加标题', 'Admin', 'Feeditem', 'add', 39),
+(41, '修改标题', 'Admin', 'Feeditem', 'edit', 39),
+(42, '删除标题', 'Admin', 'Feeditem', 'delete', 39),
+(43, '风云人物', '', '', '', 0),
+(44, '投票列表', 'Admin', 'Vote', 'lst',43 ),
+(45, '添加投票', 'Admin', 'Vote', 'add',44 ),
+(46, '修改投票', 'Admin', 'Vote', 'edit', 44),
+(47, '删除投票', 'Admin', 'Vote', 'delete', 44),
+(48, '投票子项目列表', 'Admin', 'Vote', 'itemlst', 44),
+(49, '添加投票子项目', 'Admin', 'Vote', 'itemadd', 44),
+(50, '修改投票子项目', 'Admin', 'Vote', 'itemedit', 44),
+(51, '删除投票自项目', 'Admin', 'Vote', 'itemdelete', 44),
+(52, '课程班级管理', '', '', '', 0),
+(53, '系级列表', 'Admin', 'Department', 'lst', 52),
+(54, '添加系', 'Admin', 'Department', 'add',53 ),
+(55, '修改系', 'Admin', 'Department', 'edit', 53),
+(56, '删除系', 'Admin', 'Department', 'delete', 53),
+(57, '班级列表', 'Admin', 'Cla', 'lst', 52),
+(58, '添加班级', 'Admin', 'Cla', 'add', 57),
+(59, '修改班级', 'Admin', 'Cla', 'edit', 57),
+(60, '删除班级', 'Admin', 'Cla', 'delete', 57),
+(61, '课程表列表', 'Admin', 'Coursetable', 'lst', 52),
+(62, '添加课程表', 'Admin', 'Coursetable', 'add', 61),
+(63, '修改课程表', 'Admin', 'Coursetable', 'edit', 61),
+(64, '删除课程表', 'Admin', 'Coursetable', 'delete', 61),
+(65, '会员管理', '', '', '', 0),
+(66, '会员列表', 'Admin', 'User', 'lst', 65),
+(67, '添加会员', 'Admin', 'User', 'add',66 ),
+(68, '修改会员', 'Admin', 'User', 'edit', 66),
+(69, '删除会员', 'Admin', 'User', 'delete', 66),
+(70, '二手交易管理', '', '', '', 0),
+(71, '二手信息列表', 'Admin', 'Secondthing', 'lst', 70),
+(72, '添加二手', 'Admin', 'Secondthing', 'add',71 ),
+(73, '修改二手', 'Admin', 'Secondthing', 'edit', 71),
+(74, '删除二手', 'Admin', 'Secondthing', 'delete', 71),
+(75, '二手种类列表', 'Admin', 'Secondcat', 'lst', 70),
+(76, '添加二手种类', 'Admin', 'Secondcat', 'add',75 ),
+(77, '修改二手种类', 'Admin', 'Secondcat', 'edit', 75),
+(78, '删除二手种类', 'Admin', 'Secondcat', 'delete', 75);
+
+
+
+drop table if exists czxy_role_pri;
+create table czxy_role_pri
+(
+  pri_id mediumint unsigned not null comment '权限id',
+  role_id mediumint unsigned not null comment '角色id',
+  key (pri_id),
+  key (role_id)
+)engine=InnoDB default charset=utf8 comment '角色权限';
+
+drop table if exists czxy_role;
+create table czxy_role(
+  id mediumint unsigned not null auto_increment comment 'id',
+  role_name varchar(30) not null comment '角色名称',
+  primary key (id)
+)engine=InnoDB default charset=utf8 comment '角色';
+drop table if exists czxy_admin_role;
+create table czxy_admin_role
+(
+  admin_id mediumint unsigned not null comment '管理员id',
+  role_id mediumint unsigned not null comment '角色id',
+  key (admin_id),
+  key (role_id)
+)engine=InnoDB default charset=utf8 comment '管理员角色';
+
+
+drop table if exists czxy_admin;
+create table czxy_admin(
+ id mediumint unsigned not null auto_increment comment 'id',
+ username varchar(30) not null comment '用户名',
+ password varchar(50) not null comment '密码',
+ primary key(id)
+)engine=InnoDB default charset=utf8 comment '管理员';
+
+
+
+/**
+一、get请求
+
+curl "http://www.baidu.com"  如果这里的URL指向的是一个文件或者一幅图都可以直接下载到本地
+curl -i "http://www.baidu.com"  显示全部信息
+curl -l "http://www.baidu.com" 只显示头部信息
+curl -v "http://www.baidu.com" 显示get请求全过程解析
+
+wget "http://www.baidu.com"也可以
+
+二、post请求
+curl -d "param1=value1&param2=value2" "http://www.baidu.com"
+
+
+**/
+
+
+create table czxy_recordcoursetip(
+  id mediumint primary key auto_increment comment 'id',
+  classid mediumint not null comment '班级信息',
+  username mediumint not null comment '用户',
+  email varchar(40) not null comment  '用户的email'
+  )engine=InnoDB default charset=utf8 comment '记录提醒学生课程';
+//通过点击上课提醒 
+//存到数据库中
+//创造url提醒
+
+create table czxy_broadcast(
+  id mediumint primary key auto_increment comment 'id',
+  title varchar(40) not null comment '标题',
+  filepath varchar(60) not null comment '文件路径',
+  filecontent text not null  comment '文字内容',
+  leader varchar(30) not null comment '主办方',
+  author varchar(15) not null comment '作者', 
+  adddate datetime not null comment '发布时间'
+)engine=InnoDB default charset=utf8 comment '校园行广播';
+
+
+
+alter table czxy_broadcast add state enum('是','否') default '否' not null comment '是否在前台显示';
+
+alter table czxy_broadcast add visited int default 1 not null comment '浏览次数';
+alter table czxy_broadcast add likeit int default 10 not null comment '点赞次数次数';
+
+签到逻辑
+学生签到 必须有班级信息
+确定当前班级  学生姓名 
+
+create table czxy_signin(
+   id mediumint primary key auto_increment comment 'id',
+   openid varchar(50) not null comment 'openid',
+   signstate enum('签到','签退') not null comment '签到签退',
+   nickname varchar(30) not null comment '昵称',
+   headimgurl varchar(200) not null comment '头像',
+   remark varchar(30) not null comment '用户备注信息',
+   signdate datetime not null comment '签到时间'
+)engine=InnoDB default charset=utf8 comment '签到记录';
+
+alter table czxy_signin drop signstate;
+alter table czxy_signin drop sex;
+alter table czxy_signin add sex int default 1 comment '性别,1为男性 2为女性 0为未知';
+
+create table czxy_signsuggestion(
+  id mediumint primary key auto_increment comment 'id',
+  remark varchar(20) not null default '' comment '姓名',
+  suggestiondate datetime not null  comment '发表意见时间',
+  suggestion text default '' comment '意见'
+)engine=InnoDB default charset=utf8 comment '签到建议';
+
+
+update czxy_user set nickname='王成龙' where id=3;
+   
+  
+create table czxy_courseinfo(
+    courseid mediumint unsigned primary key comment '课程id',
+    coursename varchar(20) not null comment '课程名'
+)engine=InnoDB default charset=utf8 comment '学生课程信息';
+
+drop table if exists czxy_gradeperiod;
+create table czxy_gradeperiod(
+   id mediumint unsigned primary key auto_increment comment 'id',
+   periodname varchar(30) not null comment '学期信息'
+)engine=InnoDB default charset=utf8 comment '学期信息';
+
+create table czxy_gradeinfo(
+    stuno bigint unsigned primary key comment '学号',
+    periodno mediumint unsigned not null comment '学期编号',
+    gradeinfo varchar(300) not null comment '学生成绩信息'
+)engine=InnoDB default charset=utf8 comment '成绩信息'; 
+
+
+alter table czxy_gradeinfo add key(periodno);
+
+//探针签到
+
+create table czxy_wifisigninfo(
+  id mediumint unsigned auto_increment primary key comment 'id',
+  mobilephone char(11) not null comment 'MAC绑定手机号',
+  phonemac char(18) not null comment 'MAC地址'
+)engine=InnoDB default charset=utf8 comment '探针签到信息录入';
+
+create table czxy_wifisignsuc(
+   id mediumint unsigned auto_increment primary key comment 'id',
+   username char(11) not null comment '用户名',
+   nickname varchar(20) not null comment '姓名',
+   macaddr  char(17) not null comment 'mac地址',
+   signtime datetime not null comment '签到时间',
+   key (username,nickname)
+)engine=InnoDB default charset=utf8 comment '探针签到信息';
+
+drop table  if exists czxy_classroombinddev;
+create table czxy_classroombinddev(
+    id mediumint unsigned auto_increment primary key comment 'id',
+    devid varchar(50) not null comment '设备id',
+    classroomaddr varchar(100) not null comment '教室位置',
+    roomcapacity int unsigned comment '教室容纳人数'
+)engine=InnoDB default charset=utf8 comment '教室绑定探针设备';
+

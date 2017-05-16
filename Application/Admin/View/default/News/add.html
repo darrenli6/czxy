@@ -1,0 +1,85 @@
+<layout name="layout" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div class="tab-div">
+    <div id="tabbar-div">
+        <p>
+            <span class="tab-front" id="general-tab">通用信息</span>
+        </p>
+    </div>
+    <div id="tabbody-div">
+        <form enctype="multipart/form-data" action="__SELF__" method="post">
+            <table width="90%" id="general-table" align="center">
+                <tr>
+                    <td class="label">新闻标题</td>
+                    <td><input type="text" name="title" value=""size="30" />
+                    <span class="require-field">*</span></td>
+                </tr>
+                 <tr>
+                    <td class="label">作者</td>
+                    <td><input type="text" name="author" value=""size="30" />
+                    <span class="require-field">*</span></td>
+                </tr>
+                
+                <tr>
+                    <td class="label">新闻类型：</td>
+                    <td>
+                        <select name="news_type_id">
+                            <?php foreach($ntData as $k=>$v): ?>
+                             
+                            <option value="<?php echo  $v['id']; ?>"><?php echo $v['type_name'];    ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <span class="require-field">*</span>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td class="label">是否显示在前台：</td>
+                    <td>
+                        <input type="radio" name="is_on_line" value="是"/> 是
+                        <input type="radio" name="is_on_line" value="否"/> 否
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td class="label">推荐排序：</td>
+                    <td>
+                        <input type="text" name="sort_order" size="5" value=""/>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="label">商品图片：</td>
+                    <td>
+                        <input type="file" name="sm_logo" size="35" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">新闻内容：</td>
+                    <td>
+                        <textarea name="content" id="content" cols="40" rows="3"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="button-div">
+                <input type="submit" value=" 确定 " class="button"/>
+                <input type="reset" value=" 重置 " class="button" />
+            </div>
+        </form>
+    </div>
+</div>
+
+    <link href="__PUBLIC__/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/umeditor1_2_2-utf8-php/lang/zh-cn/zh-cn.js"></script>
+    <script>
+     UM.getEditor('content',{
+    	 initialFrameWidth:'100%',
+    	 initialFrameHeight:350
+     });
+     
+     </script>
+ 

@@ -1,0 +1,44 @@
+<layout name="layout" />
+
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data" >
+    	<input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">你的卖家：</td>
+                <td>
+                    <input  type="text" name="fromusername" value="<?php echo $data['fromusername']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">购买二手物品的id：</td>
+                <td>
+                    <input  type="text" name="secondid" value="<?php echo $data['secondid']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">记录买家：</td>
+                <td>
+                    <input  type="text" name="tousername" value="<?php echo $data['tousername']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">购买时间：</td>
+                <td>
+                    <input id="msgdate" type="text" name="msgdate" value="<?php echo $data['msgdate']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+$("#msgdate").datepicker(); 
+</script>

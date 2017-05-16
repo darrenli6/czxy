@@ -1,0 +1,60 @@
+<layout name="layout" />
+
+<!-- 搜索 -->
+<div class="form-div search_form_div">
+    <form action="__ACTION__" method="GET" name="search_form">
+		<p>
+			用户名：
+	   		<input type="text" name="username" size="30" value="<?php echo I('get.username'); ?>" />
+		</p>
+		<p>
+			姓名：
+	   		<input type="text" name="nickname" size="30" value="<?php echo I('get.nickname'); ?>" />
+		</p>
+		<p>
+			签到时间：
+	   		从 <input id="signtimefrom" type="text" name="signtimefrom" size="15" value="<?php echo I('get.signtimefrom'); ?>" /> 
+		    到 <input id="signtimeto" type="text" name="signtimeto" size="15" value="<?php echo I('get.signtimeto'); ?>" />
+		</p>
+		<p><input type="submit" value=" 搜索 " class="button" /></p>
+    </form>
+</div>
+<!-- 列表 -->
+<div class="list-div" id="listDiv">
+	<table cellpadding="3" cellspacing="1">
+    	<tr>
+            <th >用户名</th>
+            <th >姓名</th>
+            <th >mac地址</th>
+            <th >签到时间</th>
+			<th width="60">操作</th>
+        </tr>
+		<?php foreach ($data as $k => $v): ?>            
+			<tr class="tron">
+				<td><?php echo $v['username']; ?></td>
+				<td><?php echo $v['nickname']; ?></td>
+				<td><?php echo $v['macaddr']; ?></td>
+				<td><?php echo $v['signtime']; ?></td>
+		        <td align="center">
+		        	<a href="<?php echo U('edit?id='.$v['id'].'&p='.I('get.p')); ?>" title="编辑">编辑</a> |
+	                <a href="<?php echo U('delete?id='.$v['id'].'&p='.I('get.p')); ?>" onclick="return confirm('确定要删除吗？');" title="移除">移除</a> 
+		        </td>
+	        </tr>
+        <?php endforeach; ?> 
+		<?php if(preg_match('/\d/', $page)): ?>  
+        <tr><td align="right" nowrap="true" colspan="99" height="30"><?php echo $page; ?></td></tr> 
+        <?php endif; ?> 
+	</table>
+</div>
+
+<link href="__PUBLIC__/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="__PUBLIC__/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="__PUBLIC__/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+<script>$.timepicker.setDefaults($.timepicker.regional['zh-CN']);</script>
+		<script>
+$('#signtimefrom').datetimepicker(); $('#signtimeto').datetimepicker(); </script>
+
+<script src="__PUBLIC__/Admin/Js/tron.js"></script>

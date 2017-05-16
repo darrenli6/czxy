@@ -1,0 +1,83 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<title>校园行</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- loading mui -->
+	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.min.css">
+	<!-- loading picker -->
+	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.picker.min.css"> -->
+	<!-- loading popicker -->
+	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.poppicker.css"> -->
+	<!-- custorm style -->
+	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/datetime/datedropper.css">
+	<script src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/style.css">
+</head>
+    <script language="javascript">
+	$(document).ready(function() {
+		$("#button").click(function() {
+			 
+			$("#retData").html('loading...');
+
+			var start = $("#start").val();
+			var end= $("#end").val();
+			var date= $("#pickdate").val();
+			$.get("<?php echo U('gettrain'); ?>", {
+				 start:start,
+				 end:end,
+				 date:date,
+			}, function(data) {
+				 
+				$("#retData").html(data);
+				 
+				 
+			});
+
+			return false;
+		});
+		
+		$('td').click(function(){
+		    alert($this.html());
+		     
+		});
+	});
+</script>
+<body>
+	<!-- 导航栏 -->
+	<header id="header" class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">校园行</h1>
+		<a class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left" href="<?php echo U('index'); ?>"><span class="mui-icon mui-icon-left-nav"></span></a>
+	</header>
+	<!-- 右上角弹出菜单 -->
+ 
+	<!-- 主内容部分 -->
+	<div class="content">
+		<section class="xueqi">
+			 <input name="expressno" class="tip" type="text" id="start" value="" placeholder="出发地" />	 
+			到 <input name="expressno" class="tip" type="text" id="end" value="" placeholder="目的地" />
+			<input name="date" class="tip" type="text" id="pickdate" value="" placeholder="时间" />	 	 
+		     <input type="submit"    id="button" value="查询" />
+		      
+			 <div id="retData" style="color:#000;">
+		    <?php
+ ?>
+			</div>
+		 
+		</section>
+    
+	</div>
+	<script src="/Test4/czxy/Public/Home/js/mui.min.js"></script>
+</body>
+    
+<script src="/Test4/czxy/Public/Home/datetime/datedropper.min.js"></script>	
+ <script>
+$("#pickdate").dateDropper({
+	animate: false,
+	format: 'Y-m-d',
+	maxYear: '2020'
+});
+ 
+</script>
+</html>

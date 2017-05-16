@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school School="czxy">
+<department ID="1" departmentID="1" department="计算机系" >
+  <clas ID="1302" clasID="1302" clas="计科1302" />
+  <clas ID="1301" clasID="1301" clas="计科1301" />
+</department>
+<department ID="2" departmentID="2" department="化学系" >
+  <clas ID="1302" clasID="1302" clas="化工1302" />
+  <clas ID="1301" clasID="1301" clas="化工1301" />
+</department>
+</school>

@@ -1,0 +1,55 @@
+<layout name="layout" />
+<div class="main-div">
+    <form name="main_form" method="POST" action="__SELF__" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">openid：</td>
+                <td>
+                    <input  type="text" name="openid" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">签到签退：</td>
+                <td>
+                	<input type="radio" name="signstate" value="签到"  />签到 
+                	<input type="radio" name="signstate" value="签退"  />签退 
+                </td>
+            </tr>
+            <tr>
+                <td class="label">昵称：</td>
+                <td>
+                    <input  type="text" name="nickname" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">头像：</td>
+                <td>
+                	<input type="file" name="headimgurl" /> 
+                </td>
+            </tr>
+            <tr>
+                <td class="label">用户备注信息：</td>
+                <td>
+                    <input  type="text" name="remark" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">签到时间：</td>
+                <td>
+                    <input id="signdate" type="text" name="signdate" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+<script>
+$("#signdate").datepicker(); 
+</script>

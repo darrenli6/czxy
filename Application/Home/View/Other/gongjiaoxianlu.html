@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>公交线路查询</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css?v=1.0"/>
+     <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.3&key=95874d8ff8cb988804b924431ae3543b"></script>
+</head>
+    <style type="text/css">
+        body {
+            font-size: 12px;
+        }
+        #tip {
+        	width:160px;
+            background-color: #ddf;
+            color: #333;
+            border: 1px solid silver;
+            box-shadow: 3px 4px 3px 0px silver;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 20px;
+        	z-index:100;
+        }
+        #tip input[type="text"] {
+            height: 25px;
+            border: 0;
+            padding-left: 5px;
+            width: 140px;
+            border-radius: 3px;
+            outline: none;
+        }
+        
+
+    </style>
+<script type="text/javascript">
+    
+</script>   
+<body>
+<div id="tip">
+    <input type="text" id="keyword" name="keyword" placeholder="请输入公交线路：(如:9)" value="" onfocus='this.value=""'/>
+    <input type="button" id="btn" onclick="getData();" value="确定" />
+    <input type="button" onclick="javascript:location.href='<?php echo U('index'); ?>'" value="返回" />
+    <div id="result">
+    </div>
+</div> 
+<div id="mapContainer"></div>
+<script language="javascript">
+    var resLine = ''; //结果表格对象
+
+    var map = new AMap.Map("mapContainer", {
+    resizeEnable: true,
+    center: [113.08,36.18],//地图中心点
+    zoom: 13 //地图显示的缩放级别
+    });
+/*
+ *清空地图覆盖物与查询结果
+ */
+   function mapclear() {
+    btContent = '';
+    resLine = '';
+    map.clearMap();
+    }
+    function getData(){
+      var  ln=document.getElementById('keyword').value;	
+      var  str=ln.toString();
+      lineSearch(str); 
+    	 /*
+         * 该示例主要流程分为三个步骤
+         * 1. 首先调用公交路线查询服务(lineSearch)
+         * 2. 根据返回结果解析，输出解析结果(lineSearch_Callback)
+         * 3. 在地图上绘制公交线路()
+         */
+   
+        /*
+         *公交线路查询
+         */
+        function lineSearch(ln) {
+            //加载公交线路查询插件
+            //实例化公交线路查询类，只取回一条路线
+           
+            AMap.service(["AMap.LineSearch"], function() {
+                var linesearch = new AMap.LineSearch({
+                    pageIndex: 1,
+                    city: '长治',
+                    pageSize: 1,
+                    extensions: 'all'
+                });
+                 
+                //搜索“536”相关公交线路
+                linesearch.search(ln, function(status, result) {
+                    if (status === 'complete' && result.info === 'OK') {
+                        lineSearch_Callback(result);
+                       // console.log(result.lineInfo);
+                       var obj=result.lineInfo;
+                       var len=obj.length;
+                       //返回 首班车  
+                       for(var i=0;i<len;i++)
+                        {  
+                    	  var str="校园行APP温馨提示公交线路 : "; 
+                    	  // console.log(obj[i].via_stops.length);
+                    	   for(var j=0;j<obj[i].via_stops.length;j++)
+                    		 { 
+                    		   var obj1=obj[i].via_stops;
+                    		   str+=obj1[j].name+"&nbsp;&nbsp;&nbsp;";
+                    		   
+                    		 }
+                    	   var result=document.getElementById("result");
+                    	   result.innerHTML=str;
+                        }
+                      // console.log(obj.length);
+                       
+                    } else {
+                        alert(result);
+                    }
+                });
+            });
+        }
+        /*
+         * 公交路线查询服务返回数据解析概况
+         * param Array[]  lineArr     返回公交线路总数
+         * param String   lineName    公交线路名称
+         * param String   lineCity    公交所在城市
+         * param String   company     公交所属公司
+         * param Number   stime       首班车时间
+         * param Number   etime       末班车时间
+         * param Number   bprice      公交起步票价
+         * param Number   tprice      公交全程票价
+         * param Array[]  pathArr     公交线路路径数组
+         */
+        function lineSearch_Callback(data) {
+            var lineArr = data.lineInfo;
+            var lineNum = data.lineInfo.length;
+            if (lineNum == 0) {
+                resLine = data.info;
+            }
+            else {
+                for (var i = 0; i < lineNum; i++) {
+                    var pathArr = lineArr[i].path;
+                    var stops = lineArr[i].via_stops;
+                    var startPot = stops[0].location;
+                    var endPot = stops[stops.length - 1].location;
+                    
+                    if (i == 0) drawbusLine(startPot, endPot, pathArr);
+                }
+            }
+        }
+        /*
+         *绘制路线
+         */
+        function drawbusLine(startPot, endPot, BusArr) {
+            //绘制起点，终点
+            var stmarker = new AMap.Marker({
+                map: map,
+                position: [startPot.lng, startPot.lat], //基点位置
+                icon: "http://webapi.amap.com/theme/v1.3/markers/n/start.png",
+                zIndex: 10
+            });
+            var endmarker = new AMap.Marker({
+                map: map,
+                position: [endPot.lng, endPot.lat], //基点位置
+                icon: "http://webapi.amap.com/theme/v1.3/markers/n/end.png",
+                zIndex: 10
+            });
+            //绘制乘车的路线
+            busPolyline = new AMap.Polyline({
+                map: map,
+                path: BusArr,
+                strokeColor: "#09f",//线颜色
+                strokeOpacity: 0.8,//线透明度
+                strokeWeight: 6//线宽
+            });
+            map.setFitView();
+        }
+         
+    }
+     
+   
+</script>
+<script type="text/javascript" src="http://webapi.amap.com/demos/js/liteToolbar.js"></script>
+   
+</body>
+</html>
