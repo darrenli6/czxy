@@ -13,6 +13,7 @@ class BroadcastController extends Controller {
          $this->assign(array(
              'bData'=>$bData,
          ));
+         
          $this->display();
     }
     
