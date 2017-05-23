@@ -122,99 +122,20 @@ body {
 </div>
 <div id="main-div">
     <div id="menu-list">
-        <ul id="menu-ul">
+          <ul id="menu-ul">
+        <?php
+        $priModel = D('privilege');
+        $btns = $priModel->getBtns();
+        foreach ($btns as $k => $v): ?>
             <li class="explode" key="02_cat_and_goods" name="menu">
-        新闻中心
+            <?php echo $v['pri_name']; ?>
                 <ul>
-                    <li class="menu-item"><a href="<?php echo U('news/lst'); ?>" target="main-frame">新闻列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('NewsType/lst'); ?>" target="main-frame">新闻主题列表</a></li>
+                	<?php foreach ($v['children'] as $k1 => $v1): ?>
+                    <li class="menu-item"><a href="<?php echo U($v1['module_name'].'/'.$v1['controller_name'].'/'.$v1['action_name']); ?>" target="main-frame"><?php echo $v1['pri_name']; ?></a></li>
+					<?php endforeach; ?>
                 </ul>
             </li>
-            <li class="explode" key="02_cat_and_goods" name="menu">
-       校园广播
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Broadcast/lst'); ?>" target="main-frame">校园广播</a></li>
-                </ul>
-            </li>
-           <li class="explode" key="04_order" name="menu">
-           拓展功能
-                <ul>
-                    <li class="menu-item"><a href="http://www.lijia.com/Test4/czxy/index.php/Gii/" target="main-frame">GII</a></li>
-                     
-                </ul>
-            </li>
-   
-   
-            <li class="explode" key="04_order" name="menu">
-           兼职中心
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Applyjob/lst'); ?>" target="main-frame">申请工作</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Faoffer/lst'); ?>" target="main-frame">发布工作信息</a></li>
-                    <li class="menu-item"><a href="<?php echo U('enterappraise/lst'); ?>" target="main-frame">企业反馈信息</a></li>
-                    
-                </ul>
-            </li>
-            
-                <li class="explode" key="04_order" name="menu">
-           反馈信息
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Feedback/lst'); ?>" target="main-frame">反馈信息</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Feeditem/lst'); ?>" target="main-frame">反馈标题</a></li>
-                    
-                </ul>
-            </li>     
-                <li class="explode" key="04_order" name="menu">
-           二手信息
-               <ul>
-                    <li class="menu-item"><a href="<?php echo U('Secondthing/lst'); ?>" target="main-frame">二手信息</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Secondcat/lst'); ?>" target="main-frame">二手种类</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Recordmsgsecond/lst'); ?>" target="main-frame">二手货购买痕迹</a></li>
-                    
-                </ul>
-            </li>     
-            <li class="explode" key="08_members" name="menu">
-       风云人物
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Vote/lst'); ?>" target="main-frame">投票列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-       课程班级管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Department/lst'); ?>" target="main-frame">系列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Cla/lst'); ?>" target="main-frame">班级列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Coursetable/lst'); ?>" target="main-frame">课程表列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Recordcoursetip/lst'); ?>" target="main-frame">记录提醒学生课程</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Gradeperiod/lst'); ?>" target="main-frame">学期信息</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Courseinfo/lst'); ?>" target="main-frame">课程信息</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Gradeinfo/lst'); ?>" target="main-frame">成绩信息</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-       会员管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('User/lst'); ?>" target="main-frame">会员列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Userrole/lst'); ?>" target="main-frame">用户角色</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-       签到管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('signin/lst'); ?>" target="main-frame">Ibeacon签到列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('signsuggestion/lst'); ?>" target="main-frame">签到意见列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Wifisigninfo/lst'); ?>" target="main-frame">探针签到信息录入 </a></li>
-                    <li class="menu-item"><a href="<?php echo U('Wifisignsuc/lst'); ?>" target="main-frame">探针签到信息列表 </a></li>
-                    <li class="menu-item"><a href="<?php echo U('Classroombinddev/lst'); ?>" target="main-frame">探针设备绑定教室 </a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-      RBAC管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Role/lst'); ?>" target="main-frame">角色列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Privilege/lst'); ?>" target="main-frame">权限列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Admin/lst'); ?>" target="main-frame">管理员列表</a></li>
-                </ul>
-            </li>
+  		<?php endforeach; ?>
         </ul>
     </div>
     <div id="help-div" style="display:none">
