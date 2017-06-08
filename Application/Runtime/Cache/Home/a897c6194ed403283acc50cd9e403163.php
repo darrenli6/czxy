@@ -9,8 +9,8 @@
 <meta name="format-detection" content="telephone=no">
 <title></title>
 
-<link rel="stylesheet" href="/Test4/czxy/Public/Home/music/css/datouwang.css" />
-<link rel="stylesheet" href="/Test4/czxy/Public/Home/music/css/jquery.equalizer.css" />
+<link rel="stylesheet" href="/czxy/Public/Home/music/css/datouwang.css" />
+<link rel="stylesheet" href="/czxy/Public/Home/music/css/jquery.equalizer.css" />
 <style>
 
 #back img {
@@ -30,7 +30,7 @@
 </head>
 <body>
    <a id="back"  href="<?php echo U('index'); ?>"  >
-		<img src="/Test4/czxy/Public/Home/images/a_back.png"  />
+		<img src="/czxy/Public/Home/images/a_back.png"  />
    </a>
 <br>
  
@@ -47,9 +47,9 @@
 	 
 </section>
 
-<script type="text/javascript" src="/Test4/czxy/Public/Home/music/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="/Test4/czxy/Public/Home/music/js/jquery.reverseorder.js"></script>
-<script type="text/javascript" src="/Test4/czxy/Public/Home/music/js/jquery.equalizer.js"></script>
+<script type="text/javascript" src="/czxy/Public/Home/music/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/czxy/Public/Home/music/js/jquery.reverseorder.js"></script>
+<script type="text/javascript" src="/czxy/Public/Home/music/js/jquery.equalizer.js"></script>
 <script>
 	$(document).ready(function(){
 		
@@ -69,7 +69,7 @@
 				if(msg!='点赞失败')
 					{
 					$('#likenum').text(msg);
-					$('#like img').attr('src',"/Test4/czxy/Public/Home/images/likeafter.png");
+					$('#like img').attr('src',"/czxy/Public/Home/images/likeafter.png");
 					}else{
 					 $('#likenum').text('系统繁忙');
 					}
@@ -81,7 +81,7 @@
 	
 </script>
 <a id="like"  onclick="likeit()"  >
-		<img src="/Test4/czxy/Public/Home/images/likebefore.png"  />
+		<img src="/czxy/Public/Home/images/likebefore.png"  />
 		<span id="likenum"><?php echo $bData['likeit']; ?></span>
  </a>
 <div style="text-align:center;">

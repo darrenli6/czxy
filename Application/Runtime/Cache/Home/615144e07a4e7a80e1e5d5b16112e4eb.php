@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>校园行-你就行</title>
-    <link rel="stylesheet" href="/Test4/czxy/Public/Home/css/company.css"    />
+    <link rel="stylesheet" href="/czxy/Public/Home/css/company.css"    />
     <script type="text/javascript">
     </script>
 </head>
@@ -39,7 +39,7 @@
 		</nav>
 	</footer>
 	<a href="job_write.html"   class="a_btn bott">
-		<img src="/Test4/czxy/Public/Home/images/a_send.png"   />
+		<img src="/czxy/Public/Home/images/a_send.png"   />
 	</a>
 	<div class="content">
 		<ul>
@@ -48,7 +48,7 @@
 				<div class="company_joblist">
 					<div class="company_img"  >
 					    <a href="<?php echo U(enterprise,'jobid='.$v['id']); ?>">
-						<img src="/Test4/czxy/Public/Home/images/pin.jpg"   />
+						<img src="/czxy/Public/Home/images/pin.jpg"   />
 					    </a>
 					</div>
 					<div class="company_jobtxt">
@@ -58,7 +58,7 @@
 						<p class="job_tel">联系方式:<?php echo $v['com_tel']; ?></p>
 					</div>
 					<div class="tip_look">
-						<img src="/Test4/czxy/Public/Home/images/heart.png" onclick="addlike(<?php echo $v['id']; ?>)" /><span id="look_num<?php echo $v['id']; ?>">
+						<img src="/czxy/Public/Home/images/heart.png" onclick="addlike(<?php echo $v['id']; ?>)" /><span id="look_num<?php echo $v['id']; ?>">
 						  <?php echo $v['com_like']; ?>
 						</span>
 					</div>
@@ -68,9 +68,9 @@
 		</ul>
 	</div>
 	<a id="back"     href="<?php echo U('Index/index'); ?>" >
-		<img src="/Test4/czxy/Public/Home/images/a_back.png"  />
+		<img src="/czxy/Public/Home/images/a_back.png"  />
 		</a>
-   <script type="text/javascript" src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"  ></script>
+   <script type="text/javascript" src="/czxy/Public/Home/js/jquery-1.8.3.min.js"  ></script>
    <script>
    	  function addlike(jobid){
    		  var jid=jobid;

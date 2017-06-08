@@ -140,7 +140,15 @@ class PersonCenterController extends Controller {
       {
          
           
-      }
+     }
+      
+     /*
+      #!/bin/bash
+      curl http://127.0.0.1/Test4/czxy/index.php/Home/PersonCenter/messagetip
+      
+      # minuite  hour  day month  week
+      00    19 *  *  *  /out.sh
+      * */
       
       //短信提醒操作 
       public function messagetip()

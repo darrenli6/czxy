@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>二手货物详情</title>
-    <link rel="stylesheet" href="/Test4/czxy/Public/Home/er/css/spxq.css"/>
-    <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/er/css/swipe.css">
-   	<script type="text/javascript" src="/Test4/czxy/Public/Home/er/js/touch.js"></script>
-    <script src="/Test4/czxy/Public/Home/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/czxy/Public/Home/er/css/spxq.css"/>
+    <link rel="stylesheet" type="text/css" href="/czxy/Public/Home/er/css/swipe.css">
+   	<script type="text/javascript" src="/czxy/Public/Home/er/js/touch.js"></script>
+    <script src="/czxy/Public/Home/js/jquery.min.js"></script>
 </head>
 <script>
    function send(){
@@ -66,14 +66,14 @@
 <body>
 <div class="body">
     <div class="tour">
-        <a href="<?php echo U('index'); ?>" class="tour1"><img src="/Test4/czxy/Public/Home/er/img/back.png" alt="" style="height: 26px;width: 20px"></a>
+        <a href="<?php echo U('index'); ?>" class="tour1"><img src="/czxy/Public/Home/er/img/back.png" alt="" style="height: 26px;width: 20px"></a>
         <p>二手货物详情</p>
     </div>
     <figure>
         <div class="addWrap">
             <div class="swipe" id="mySwipe">
                 <div class="swipe-wrap">
-                  <?php  if(!$sData['big_title_pic']) { echo '<div><img class="img-responsive" src="/Test4/czxy/Public/Home/images/393355.jpg"/></div>'; }else { echo '<div>'; showImage($sData['big_title_pic']); echo '</div>'; } ?>
+                  <?php  if(!$sData['big_title_pic']) { echo '<div><img class="img-responsive" src="/czxy/Public/Home/images/393355.jpg"/></div>'; }else { echo '<div>'; showImage($sData['big_title_pic']); echo '</div>'; } ?>
                      
                 </div>
             </div>
@@ -84,7 +84,7 @@
             </ul>
         </div>
         <!-- 轮播 -->
-        <script src="/Test4/czxy/Public/Home/er/js/swipe.js"></script>
+        <script src="/czxy/Public/Home/er/js/swipe.js"></script>
         <script type="text/javascript">
             var bullets = document.getElementById('position').getElementsByTagName('li');
             var banner = Swipe(document.getElementById('mySwipe'), {

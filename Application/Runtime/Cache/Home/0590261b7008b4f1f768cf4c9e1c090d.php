@@ -35,7 +35,7 @@
 		</div>
 	</div>
 
-	<script src="/Test4/czxy/Public/Home/game/js/Block.js"></script>
+	<script src="/czxy/Public/Home/game/js/Block.js"></script>
 	<script>
 		var oContainer = document.getElementById('container');
 		var block = new Block(oContainer);

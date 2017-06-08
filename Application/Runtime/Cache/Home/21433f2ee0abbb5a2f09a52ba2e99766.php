@@ -4,14 +4,14 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>职位详情</title>
-		<link rel="stylesheet" href="/Test4/czxy/Public/Home/css/company.css" />
+		<link rel="stylesheet" href="/czxy/Public/Home/css/company.css" />
 	</head>
 	<body>
 		<header>
 		</header>
-		<a id="back" class="a_btn bottL01" href="<?php echo U('index'); ?>"><img src="/Test4/czxy/Public/Home/images/a_back.png"></a>
+		<a id="back" class="a_btn bottL01" href="<?php echo U('index'); ?>"><img src="/czxy/Public/Home/images/a_back.png"></a>
 		<a href="<?php echo U('enterappraise','enterpriseid='.$eData['id']); ?>"   class="a_btn bott">
-		<img src="/Test4/czxy/Public/Home/images/a_send.png"   />
+		<img src="/czxy/Public/Home/images/a_send.png"   />
 	    </a>
 		<div class="jobcontent">
 			<div class="job">
@@ -24,7 +24,7 @@
 					</a>
 					<ul>
 						<li>
-							<span>校园行认证:</span> <p><?php  if($eData['checkenter']=='企业认证') { echo '企业认证   '.'&nbsp;&nbsp;&nbsp;<img src="/Test4/czxy/Public/Home/images/v.gif"   />'; }else{ echo '企业未认证'; } ?></p>
+							<span>校园行认证:</span> <p><?php  if($eData['checkenter']=='企业认证') { echo '企业认证   '.'&nbsp;&nbsp;&nbsp;<img src="/czxy/Public/Home/images/v.gif"   />'; }else{ echo '企业未认证'; } ?></p>
                                
 						</li>
 						<li>
@@ -76,7 +76,7 @@
 			</div>
 			  
 		<p id="us" style="position: fixed;bottom:5px;left:0px;font-size:14px;line-height:1.5;width: 100%;text-align: center;color: #434343;z-index:9;">@计科1302技术支持</p>
-		<script type="text/javascript" src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="/czxy/Public/Home/js/jquery-1.8.3.min.js" ></script>
 		<script>
 			$("button#apply").click(function(){
 			 

@@ -5,14 +5,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- loading mui -->
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.min.css">
 	<!-- loading picker -->
-	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.picker.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.picker.min.css"> -->
 	<!-- loading popicker -->
-	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.poppicker.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.poppicker.css"> -->
 	<!-- custorm style -->
-	<script src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/style.css">
+	<script src="/czxy/Public/Home/js/jquery-1.8.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/style.css">
   <script type="text/javascript">
 	$(document).ready(function() {
 		$("#button").click(function() {
@@ -62,6 +62,6 @@
 		
 		 
 	</div>
-	<script src="/Test4/czxy/Public/Home/js/mui.min.js"></script>
+	<script src="/czxy/Public/Home/js/mui.min.js"></script>
 </body>
 </html>

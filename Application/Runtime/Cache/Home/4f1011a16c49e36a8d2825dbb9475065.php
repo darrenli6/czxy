@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>校园行-你就行</title>
-		<link rel="stylesheet" href="/Test4/czxy/Public/Home/css/company.css"  />
+		<link rel="stylesheet" href="/czxy/Public/Home/css/company.css"  />
 		<style>
 			.content .list{float: left;width: 90%;margin: 5px 5%;}
 			.content .list label{float: left;width:26%;text-align: left;padding:2px 3%;line-height: 26px;font-size: 14px;}
@@ -19,9 +19,9 @@
 		
 		</header>
 		<a id="back" class="a_btn bottL01" href="apply_person.html"  >
-		<img src="/Test4/czxy/Public/Home/images/a_back.png"  />
+		<img src="/czxy/Public/Home/images/a_back.png"  />
 		</a>
-		<form action="/Test4/czxy/index.php/Home/Job/apply_write.html" method="post">
+		<form action="/czxy/index.php/Home/Job/apply_write.html" method="post">
 		<div class="content">
 		
 			<div class="list">
@@ -46,7 +46,7 @@
 	 
 			<div class="list">
 				<label for="company_call">联系电话：</label>
-				<input type="text" id="company_call" required="required" name="enterprise.phonenum" placeholder="如：手机号" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$"/>
+				<input type="text" id="company_call" required="required" name="tel" placeholder="如：手机号" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$"/>
 			</div>
 		    <div class="list">
 				<label for="company_call">qq：</label>
@@ -76,7 +76,7 @@
 			
 		</div>
 		</form>
-		<script type="text/javascript" src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"   ></script>
+		<script type="text/javascript" src="/czxy/Public/Home/js/jquery-1.8.3.min.js"   ></script>
 		    <script>
 		   </script>
 	</body>

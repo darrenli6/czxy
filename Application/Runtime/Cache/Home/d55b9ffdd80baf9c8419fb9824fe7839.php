@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 		<title>个人简历</title>
-		<link rel="stylesheet" href="/Test4/czxy/Public/Home/css/company.css" />
+		<link rel="stylesheet" href="/czxy/Public/Home/css/company.css" />
 		<style>
 			.person_list{float: left;width: 90%;margin:0px 5%;border-top: 1px solid #ECECEC;padding:5px 0px 2px 0px;color: #474747;}
 			.person_list h3{float: left;width:100%;line-height:32px;text-align: center;margin: 4px 0px;} 
@@ -16,8 +16,8 @@
 	<body>
 		<header>
 		</header>
-		<!-- <a id="back" class="a_btn bottL01" href="apply_person.html"><img src="/Test4/czxy/Public/Home/images/a_back.png"></a> -->
-		<a id="back" class="a_btn bottL01" href="<?php echo U('apply_person'); ?>"><img src="/Test4/czxy/Public/Home/images/a_back.png"></a> 
+		<!-- <a id="back" class="a_btn bottL01" href="apply_person.html"><img src="/czxy/Public/Home/images/a_back.png"></a> -->
+		<a id="back" class="a_btn bottL01" href="<?php echo U('apply_person'); ?>"><img src="/czxy/Public/Home/images/a_back.png"></a> 
 		<div class="content">
 			<div class="person_list">
 				<h3>个人简历</h3>

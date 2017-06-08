@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>校园行-你就行</title>
-    <link rel="stylesheet" href="/Test4/czxy/Public/Home/css/company.css"    />
+    <link rel="stylesheet" href="/czxy/Public/Home/css/company.css"    />
     <script type="text/javascript">
     </script>
 </head>
@@ -26,7 +26,7 @@
 				<div class="applyperson_list">
 					<div class="applyperson_img">
 					   <a href="<?php echo U('detail','bid='.$v['id'])?>">
-						<img src="/Test4/czxy/Public/Home/images/broadcast.png"  />
+						<img src="/czxy/Public/Home/images/broadcast.png"  />
 						</a>
 					</div>
 					<div class="applyperson_txt">
@@ -40,7 +40,7 @@
 						</p>  
 					</div>
 					<div class="tip_look">
-						<img src="/Test4/czxy/Public/Home/images/visited.png"   /><span id="look_num">
+						<img src="/czxy/Public/Home/images/visited.png"   /><span id="look_num">
 						    <?php echo $v['visited']; ?>
 						</span>
 					</div>
@@ -50,9 +50,9 @@
 		</ul>
 	</div>
 	<a id="back"     href="<?php echo U('Index/index'); ?>"  >
-		<img src="/Test4/czxy/Public/Home/images/a_back.png"  />
+		<img src="/czxy/Public/Home/images/a_back.png"  />
 		</a>
-   <script type="text/javascript" src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"  ></script>
+   <script type="text/javascript" src="/czxy/Public/Home/js/jquery-1.8.3.min.js"  ></script>
    <script>
    	  
    </script>

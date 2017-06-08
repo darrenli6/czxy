@@ -5,14 +5,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- loading mui -->
-	<script src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.min.css">
+	<script src="/czxy/Public/Home/js/jquery-1.8.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.min.css">
 	<!-- loading picker -->
-	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.picker.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.picker.min.css"> -->
 	<!-- loading popicker -->
-	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.poppicker.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.poppicker.css"> -->
 	<!-- custorm style -->
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/style.css">
 </head>
 <script type="text/javascript">
     function suggestion(){
@@ -75,6 +75,6 @@
 	<div class="author"  style="text-align:center;" >
 	  <span>技术支持:计科1302</span>
 	</div>
-	<script src="/Test4/czxy/Public/Home/js/mui.min.js"></script>
+	<script src="/czxy/Public/Home/js/mui.min.js"></script>
 </body>
 </html>

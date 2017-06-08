@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- loading mui -->
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.min.css">
 	<!-- custorm style -->
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/style.css">
 </head>
 <body>
 	<!-- 导航栏 -->
@@ -53,7 +53,7 @@
       <td><?php echo $v['title']; ?></td>
       <td><?php showImage($v['sm_pic']); ?></td>
       <td style="text-align:left;width:<?php echo $width; ?>px">
-        <img src="/Test4/czxy/Public/Home/images/b1.jpg" 
+        <img src="/czxy/Public/Home/images/b1.jpg" 
         style="width:<?php echo ($v['count']/$sum*$width); ?>%;height:21px"; />
       </td>
       <td><?php echo ceil(($v['count']/$sum*100)); ?>%</td>
@@ -63,6 +63,6 @@
 	</table>
 		</section>
 	</div>
-	<script src="/Test4/czxy/Public/Home/js/mui.min.js"></script>
+	<script src="/czxy/Public/Home/js/mui.min.js"></script>
 </body>
 </html>

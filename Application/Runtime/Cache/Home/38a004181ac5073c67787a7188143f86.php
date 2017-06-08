@@ -5,14 +5,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- loading mui -->
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.min.css">
 	<!-- loading picker -->
-	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.picker.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.picker.min.css"> -->
 	<!-- loading popicker -->
-	<!-- <link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/mui.poppicker.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/mui.poppicker.css"> -->
 	<!-- custorm style -->
-	<script src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/Test4/czxy/Public/Home/css/css/style.css">
+	<script src="/czxy/Public/Home/js/jquery-1.8.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/czxy/Public/Home/css/css/style.css">
 </head>
     <script language="javascript">
 	$(document).ready(function() {
@@ -22,7 +22,7 @@
 
 			var keywordc = $("#answer").val();
 			 
-			$.get("<?php echo U('answer'); ?>", {
+			$.get("<?php echo U('getanswer'); ?>", {
 				keyword1 : keywordc
 			}, function(data) {
 				$("#retData").html(data);
@@ -45,7 +45,7 @@
 		<section class="xueqi">
 			 <input name="keywordc" class="tip" type="text" id="answer" value="" placeholder="你想要问智能机器人什么呢?比如某地天气状况" />	 
 		     <input type="submit"    id="button" value="提问" />
-			 <div id="retData" style="color:#0000;">
+			 <div id="retData" style="color:#000;">
 		  
 			</div>
 		 
@@ -56,6 +56,6 @@
 		
 		 
 	</div>
-	<script src="/Test4/czxy/Public/Home/js/mui.min.js"></script>
+	<script src="/czxy/Public/Home/js/mui.min.js"></script>
 </body>
 </html>

@@ -100,7 +100,7 @@
 	<div class="right"><span>分数: </span><span id="score">0</span></div>
 	<div class="main">
 		<ul>
-			<li class="list1"><img src="/Test4/czxy/Public/Home/game/img/2.png"></li>
+			<li class="list1"><img src="/czxy/Public/Home/game/img/2.png"></li>
 		</ul>
 	</div>
 	<button>点 击 开 始 游 戏</button>
@@ -171,12 +171,12 @@
 				newLi.style.float='left';
 				newImg.style.display='block';
 				newImg.style.width=100+'%';
-				newImg.src='/Test4/czxy/Public/Home/game/img/1.png';
+				newImg.src='/czxy/Public/Home/game/img/1.png';
 				newLi.style.backgroundColor='rgb('+rand(50,255)+','+rand(50,255)+','+rand(50,255)+')';
 			}
 			var x=rand(0,level*level-1);		// 赋予一个随机房祖名下标
 			var imgs1=document.querySelectorAll('img');
-			imgs1[x].src='/Test4/czxy/Public/Home/game/img/2.png';	// 随机一张图片变成房祖名
+			imgs1[x].src='/czxy/Public/Home/game/img/2.png';	// 随机一张图片变成房祖名
 			var li=document.querySelectorAll('li');
 			li[x].onclick=function(){
 				for (var i=0;i<level*level;i++) {

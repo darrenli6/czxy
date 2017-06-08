@@ -16,7 +16,7 @@
             'viewPath'=>'/czxy/Public/Uploads/',  //显示图片
         ),
        'AUDIO_PATH'=>array(
-           'broadcast'=>"/Test4/czxy/Public/Home/music/",
+           'broadcast'=>"/czxy/Public/Home/music/",
            'rootPath'=>"{$_SERVER[DOCUMENT_ROOT]}/czxy/Public/Home/music/",
        ),
        'WIFI_INPUT'=>array(

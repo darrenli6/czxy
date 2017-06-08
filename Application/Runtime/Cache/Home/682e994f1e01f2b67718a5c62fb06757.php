@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>公司评价</title>
-		<link rel="stylesheet" href="/Test4/czxy/Public/Home/css/company.css" />
+		<link rel="stylesheet" href="/czxy/Public/Home/css/company.css" />
 	</head>
  
 		<style type="text/css">
@@ -49,16 +49,16 @@
 	           margin:0 auto;
 			}
 		</style>
-		 <script type="text/javascript" src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js"  ></script>
-		 <script type="text/javascript" src="/Test4/czxy/Public/Home/js/my.js"  ></script>
+		 <script type="text/javascript" src="/czxy/Public/Home/js/jquery-1.8.3.min.js"  ></script>
+		 <script type="text/javascript" src="/czxy/Public/Home/js/my.js"  ></script>
    
 	<body>
 		<header>
 		</header>
-		<a id="back" class="a_btn bottL01" href="<?php echo U('index'); ?>"><img src="/Test4/czxy/Public/Home/images/a_back.png"></a>
+		<a id="back" class="a_btn bottL01" href="<?php echo U('index'); ?>"><img src="/czxy/Public/Home/images/a_back.png"></a>
 		 
 		<div class="jobcontent">
-		<form action="/Test4/czxy/index.php/Home/Job/enterappraise/enterpriseid/2.html" method="post">
+		<form action="/czxy/index.php/Home/Job/enterappraise/enterpriseid/1.html" method="post">
 		<input name="appraisenum" id="appraisenum" value="" type="hidden" />
 		<input name="enterpriseid"  value="<?php echo $fData['id']; ?>" type="hidden" />
 			<div class="job">
@@ -92,7 +92,7 @@
 					
 				</div>
 				 <div class="job_detail">
-						<span>吐一下槽</span>
+						<span>吐一下槽吧:</span>
 						<p class="job_detailtxt">
 							<textarea name="tucao" placeholder="我们将不断改进" rows="7" cols="35" >
 							 
@@ -108,7 +108,7 @@
 			</div>
 			  
 		<p id="us" style="position: fixed;bottom:5px;left:0px;font-size:14px;line-height:1.5;width: 100%;text-align: center;color: #434343;z-index:9;">@计科1302技术支持</p>
-		<script type="text/javascript" src="/Test4/czxy/Public/Home/js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="/czxy/Public/Home/js/jquery-1.8.3.min.js" ></script>
 		 
 	</body>
 </html>
